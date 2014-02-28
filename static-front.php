@@ -173,8 +173,7 @@
                         <p>Buscamos gente ilusionada con la idea de compartir nuestras singladuras, con ganas de aprender y de aportar. Por cursos anteriores han pasado psicólogos, ilustradores, diseñadores gráficos, programadores, gente de IT, de marketing, newbies y lobos de mar… Creemos que en la variedad está gran parte de la esencia de todo esto.</p>
                     </div>
                     <div class="column">
-                        <p>Navegamos en torno al diseño y la tecnología, por eso todos nuestros talleres y cursos están ligados de una manera u otra al diseño de productos digitales. Queremos en la Nave embarquen personas interesadas en aprender, compartir y, por supuesto, enseñarnos un poco más de todo esto.
-</p>
+                        <p>Navegamos en torno al diseño y la tecnología, por eso todos nuestros talleres y cursos están ligados de una manera u otra al diseño de productos digitales. Queremos en la Nave embarquen personas interesadas en aprender, compartir y, por supuesto, enseñarnos un poco más de todo esto.</p>
                     </div>
                 </div>
             </div>
