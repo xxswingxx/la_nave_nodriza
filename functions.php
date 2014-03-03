@@ -63,12 +63,19 @@ if (isset($_GET['activated']) && is_admin()){
 }
 
 /**
- * Add support for pages excerpts.
+ * Add custom init for la nave nodriza.
  **/
-add_action('init', 'my_custom_init');
-function my_custom_init() {
+function la_nave_nodriza_custom_init() {
+	// Add tag metabox to page
+	register_taxonomy_for_object_type('post_tag', 'page'); 
+    // Add support for excerpts in pages
 	add_post_type_support( 'page', 'excerpt' );
+	// Add category metabox to page
+	//register_taxonomy_for_object_type('category', 'page'); 
+
 }
+ // Add to the admin_init hook of your theme functions.php file 
+add_action('init', 'la_nave_nodriza_custom_init');
 
 
 /*
