@@ -43,5 +43,3 @@
 
 		<?php get_template_part( 'contact-form', 'page' ); ?>
     	<?php get_footer(); ?>
-
-    

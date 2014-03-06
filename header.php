@@ -70,18 +70,7 @@
                 <div class="fb-like" data-href="http://www.lanavenodriza.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
             </div>
             <ul class="nav">
-                <?php if (is_home()) { ?>
-                    <li><a href="<?php echo get_home_url() . '#what' ?>"></a></li>
-                    <li><a href="<?php echo get_home_url() . '#la-nave' ?>"Qué es</a></li>
-                    <li class="separator">/</li>
-                    <li><a href="<?php echo get_home_url() . '#founders' ?>">Quién está detrás</a></li>
-                    <li class="separator">/</li>
-                    <li><a href="<?php echo get_home_url() . '#program' ?>">Qué ofrecemos</a></li>
-                    <li class="separator">/</li>
-                    <li><a href="<?php echo get_home_url() . '#to-whom' ?>">Para quién</a></li>
-                    <li class="separator">/</li>
-                    <li><a href="<?php echo get_home_url() . '#contact' ?>">Contacta</a></li>
-                <? } else { ?>
+                <?php if (is_front_page()) { ?>
                     <li><a href="#what"></a></li>
                     <li><a href="#la-nave">Qué es</a></li>
                     <li class="separator">/</li>
@@ -92,6 +81,17 @@
                     <li><a href="#to-whom">Para quién</a></li>
                     <li class="separator">/</li>
                     <li><a href="#contact">Contacta</a></li>
+                <? } else { ?>
+                    <li><a href="<?php echo get_home_url() . '#what' ?>"></a></li>
+                    <li><a href="<?php echo get_home_url() . '#la-nave' ?>">Qué es</a></li>
+                    <li class="separator">/</li>
+                    <li><a href="<?php echo get_home_url() . '#founders' ?>">Quién está detrás</a></li>
+                    <li class="separator">/</li>
+                    <li><a href="<?php echo get_home_url() . '#program' ?>">Qué ofrecemos</a></li>
+                    <li class="separator">/</li>
+                    <li><a href="<?php echo get_home_url() . '#to-whom' ?>">Para quién</a></li>
+                    <li class="separator">/</li>
+                    <li><a href="<?php echo get_home_url() . '#contact' ?>">Contacta</a></li>
                 <? } ?>
                 <li class="separator">/</li>
                 <li><a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>">Bitácora</a></li>

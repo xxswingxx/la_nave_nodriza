@@ -16,23 +16,23 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
+	<div class="content">
+		<section id="articles">
+			<div class="section-content">
+				<?php if ( have_posts() ) : ?>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+					<?php /* The loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+						<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php endwhile; ?>
 
-			<?php la_nave_nodriza_paging_nav(); ?>
+					<?php la_nave_nodriza_paging_nav(); ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
+				<?php else : ?>
+					<?php get_template_part( 'content', 'none' ); ?>
+				<?php endif; ?>
+			</div>
+		</section>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+		<?php get_template_part( 'contact-form', 'page' ); ?>
+		<?php get_footer(); ?>
