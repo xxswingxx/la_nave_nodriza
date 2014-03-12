@@ -35,7 +35,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
     <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
-    <script type="text/javascript" id="cookiebanner" src="<?php echo get_template_directory_uri(); ?>/js/cookiebanner.js"></script>
+    <script type="text/javascript" id="cookiebanner" src="<?php echo get_template_directory_uri(); ?>/js/cookiebanner.js"
+            data-message="Para darte un servicio más personalizado, usamos cookies propias y de terceros. Si sigues navegando, entendemos que aceptas su uso."
+            data-linkmsg="Más información.">
+    </script>
 
     <!--[if lt IE 9]>
     <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
