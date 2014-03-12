@@ -159,7 +159,7 @@ function get_pages_links_with_titles($pages) {
 	$links = array();
 	$length = count($pages);
 	for($i = 0; $i < $length ; $i++) {
-		$links[$i] = "<a href='" . $pages[$i]->guid . "'>" . $pages[$i]->post_title. '</a>'; 
+		$links[$i] = "<a href='" . $pages[$i]->guid . "' style='decoration:none;color:white;border:none'>" . $pages[$i]->post_title. '</a>'; 
 	}
 	return $links;
  }

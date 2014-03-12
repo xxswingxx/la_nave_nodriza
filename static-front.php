@@ -163,6 +163,46 @@
                         <? } ?>
                     </div>
                 </div>
+                <?php if ($length > 3) { ?>
+                    <div class="three-block">
+                        <div class="three-column">
+                            <?php for($j = $i; $j < $length; $j++){ ?>
+                                <div class="column first">
+                                    <div class="program-img">
+                                        <?php $metadata = get_page_metadata($pages[$j]->ID);
+                                            $thumbnail = get_thumbnail($pages[$j]->ID)
+                                        ?>
+                                        <?php if($thumbnail != false) { ?>
+                                            <img src="<?php echo $thumbnail[0] ?>" >
+                                        <? } ?>
+                                        <h2> 
+                                            <?php if (isset($metadata['state'])){ ?>
+                                                <span> <?php echo $metadata['state'] ?></span>
+                                            <? } ?>
+                                            <? echo $metadata['type']; ?>  
+                                        </h2>
+                                        <h3>
+                                            <? echo $pages_links[$j]; ?> 
+                                            <span><? echo $metadata['extra'] ?></span>
+                                        </h3>
+                                    </div>
+                                </div>
+                            <? } ?>
+                        </div>
+                        <div class="three-column">
+                            <?php for($j = $i; $j < $length; $j++){ ?>
+                                <div class="column first">
+                                    <p> 
+                                        <? echo $pages[$j]->post_excerpt; ?>
+                                        </br>
+                                        <a href="<? echo get_permalink($pages[$j]->ID); ?>"> Leer más </a>.
+                                   </p>
+                           
+                                </div>
+                            <? } ?>
+                        </div>
+                    </div>
+                <? } ?>
             </div>
         </section>
         <section id="to-whom" class="">

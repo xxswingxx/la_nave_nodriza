@@ -23,7 +23,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" />
     <meta name="viewport" content="width=device-width" />
     <title>Lanavenodriza.com</title>
-    <meta name="description" content="">
     <meta name="keywords" content="curso, diseño">
     <meta name="author" content="topxel.com">
     <meta name="robots" content="index, follow">
