@@ -10,7 +10,7 @@
  */
 ?>
 
-
+        <section id="contact">
             <div class="footer">
                 <div class="inner-footer">
                     <div class="left">
