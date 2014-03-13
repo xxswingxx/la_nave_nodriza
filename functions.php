@@ -26,6 +26,12 @@
 /**
 * Error debugging
 **/
+function get_thumbnail_src($img) {
+	$pattern = '/src="([^"]+)"/';
+	preg_match($pattern, $img, $matches, PREG_OFFSET_CAPTURE);
+	return $matches[0];
+}
+
 if (!function_exists('write_log')) {
   	function write_log ( $log )  {
        	if ( true === WP_DEBUG ) {
