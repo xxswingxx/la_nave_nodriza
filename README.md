@@ -4,8 +4,8 @@ This is a custom theme for [la nave nodriza](http://lanavenodriza.com).
 
 After activation, the theme will create two pages:
 
-* Front Page: Must be set as an static front page in the "Settings -> Reading" option . Also, on the page editor the template must be set to "Home" 
-* Index: A page for the blog entries. Leave as default.
+* Front Page: An static front page
+* Index: A page for the blog entries.
 
 ## Pages extra custom fields:
 	
