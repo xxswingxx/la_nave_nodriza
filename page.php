@@ -22,14 +22,23 @@
 	    	<header role="banner">
 	    <?php endif; ?>
 	        <div class="content">       
+
 	            <!-- courses navigation -->
 	            <ul class="courses-navigation">
-	                <li>
-	                    <a href="#" class="previous">Anterior</a>
-	                </li>
-	                <li>
-	                    <a href="#" class="next">Siguiente</a>
-	                </li>             
+	            	<?php
+	            		$ids = get_prev_next();
+					?>
+
+					<?php if (!empty($ids['prev'])) { ?>
+		                <li>
+		                    <a href="<?php echo get_permalink($ids['prev']); ?>" class="previous">Anterior</a>
+		                </li>
+		            <?php } ?>
+		            <?php if (!empty($ids['next'])) { ?>
+		                <li>
+							<a href="<?php echo get_permalink($ids['next']); ?>" class="next">Siguiente</a>
+		                </li>
+		            <?php } ?>       
 	            </ul>
 	            <!-- /courses navigation -->
 	            
@@ -76,38 +85,7 @@
         <!-- /course info -->                 
     <hr>
     <!-- more courses -->                 
-    <section class="more">
-        <div class="content" role="complementary">            
-            <h2>Otras formaciones</h2>
-            <h3>Narrativa, UX, Talleres express…</h3>
-
-            <div class="three-col">
-                <div class="col">
-                    <div class="image">
-                        <a href="#"><img src="img/courses/sample_01.jpg" alt="sample_01" width="540" height="250"></a>
-                    </div>
-                    <h3><a href="#">Primera edición del curso de diseño de productos digitales</a></h3>
-                    <p>Hemos creado un lugar especial, donde las personas son las auténticas protagonistas: 80 metros diáfanos, con wifi para todos, suelo técnico, pizarra en todas las paredes... y un montón de accesorios para convertirse en cada momento en lo que la clase necesite: paneles divisorios, mesas para trabajo en grupo, sillas cómodas... y hasta rincón de pensar.</p>                    
-                </div>
-
-                <div class="col">
-                    <div class="image">
-                        <a href="#"><img src="img/courses/sample_02.jpg" alt="sample_02" width="540" height="249"></a>
-                    </div>                        
-                    <h3><a href="#">Taller de narrativa en proyectos digitales</a></h3>
-                    <p>Hemos creado un lugar especial, donde las personas son las auténticas protagonistas: 80 metros diáfanos, con wifi para todos, suelo técnico, pizarra en todas las paredes... y un montón de accesorios para convertirse en cada momento en lo que la clase necesite: paneles divisorios, mesas para trabajo en grupo, sillas cómodas... y hasta rincón de pensar.</p>                  
-                </div>                
-
-                <div class="col">
-                    <div class="image">
-                        <a href="#"><img src="img/courses/sample_03.jpg" alt="sample_03" width="540" height="249"></a>
-                    </div>                        
-                    <h3><a href="#">Cinco talleres de especialización de fin de semana</a></h3>
-                    <p>Hemos creado un lugar especial, donde las personas son las auténticas protagonistas: 80 metros diáfanos, con wifi para todos, suelo técnico, pizarra en todas las paredes... y un montón de accesorios para convertirse en cada momento en lo que la clase necesite: paneles divisorios, mesas para trabajo en grupo, sillas cómodas... y hasta rincón de pensar.</p>                  
-                </div>
-            </div>
-        </div>
-    </section>       
+    <?php get_template_part( 'related-pages', 'page' ); ?>   
     <!-- /more courses -->        
 
 	<?php get_template_part( 'contact-form-footer', 'page' ); ?>

@@ -178,9 +178,26 @@ function get_pages_links_with_titles($pages) {
   $links = array();
   $length = count($pages);
   for($i = 0; $i < $length ; $i++) {
-    $links[$i] = "<a href='" . $pages[$i]->guid . "' style='decoration:none;color:white;border:none'>" . $pages[$i]->post_title. '</a>'; 
+    $links[$i] = "<a href='" . $pages[$i]->guid . "'>" . $pages[$i]->post_title. '</a>'; 
   }
   return $links;
+}
+
+function get_prev_next() {
+  $ids = get_active();
+  $pagelist = get_active_list();
+  $pages = array();
+  foreach ($pagelist as $page) {
+     $pages[] += (int)$page->ID;
+  }
+  $current = array_search(get_the_ID(), $pages);
+  if (isset($pages[$current-1])){
+    $prevID = (int)$pages[$current-1];
+  }
+  if (isset($pages[$current+1])) {
+    $nextID = (int)$pages[$current+1];
+  }
+  return array('prev' =>  $prevID, 'next' => $nextID);
 }
 
 /**
@@ -194,7 +211,8 @@ function get_page_metadata($page_id) {
   $type = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_type'");
   $state = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_state'");
   $extra = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_extra'");
-
+  $price = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_price'");
+  $remaining_places =  $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_remaining_places'");
   $metadata = array("type" =>  $type, "state" => $state, "extra" => $extra);
 
   return $metadata;
