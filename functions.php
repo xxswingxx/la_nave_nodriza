@@ -22,6 +22,20 @@
  * @subpackage Twenty_Thirteen
  * @since La Nave Nodriza 1.0
  */
+/**
+* Split the content
+**/
+
+// split content at the more tag and return an array
+function split_content() {
+  global $more;
+  $more = true;
+  $content = preg_split('/<span id="more-\d+"><\/span>/i', get_the_content('more'));
+  for($c = 0, $csize = count($content); $c < $csize; $c++) {
+    $content[$c] = apply_filters('the_content', $content[$c]);
+  }
+  return $content;
+}
 
 /**
 * Error debugging
@@ -191,9 +205,11 @@ function get_prev_next() {
      $pages[] += (int)$page->ID;
   }
   $current = array_search(get_the_ID(), $pages);
+  $prevID = null;
   if (isset($pages[$current-1])){
     $prevID = (int)$pages[$current-1];
   }
+  $nextID = null;
   if (isset($pages[$current+1])) {
     $nextID = (int)$pages[$current+1];
   }
@@ -208,14 +224,40 @@ function get_prev_next() {
 **/
 function get_page_metadata($page_id) {
   global $wpdb;
-  $type = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_type'");
-  $state = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_state'");
-  $extra = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_extra'");
-  $price = $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_price'");
-  $remaining_places =  $wpdb->get_var("SELECT meta_value FROM $wpdb->postmeta WHERE post_id = '{$page_id}' AND meta_key = 'lnn_page_remaining_places'");
-  $metadata = array("type" =>  $type, "state" => $state, "extra" => $extra);
-
-  return $metadata;
+  $meta_list = (array)$wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta 
+                                   WHERE post_id = '{$page_id}' 
+                                   AND meta_key in 
+                                   ('lnn_page_type','lnn_page_state','lnn_page_extra','lnn_page_price','lnn_page_remaining','lnn_page_subtitle','lnn_page_discounts','lnn_page_dates')");
+  $meta_array = array();
+  foreach ($meta_list as $meta) {
+    switch ($meta->meta_key){
+      case 'lnn_page_type':
+        $meta_array['type'] = $meta->meta_value;
+        break;
+      case 'lnn_page_state':
+        $meta_array['state'] = $meta->meta_value;
+        break;
+      case 'lnn_page_extra':
+        $meta_array['extra'] = $meta->meta_value; 
+        break;
+      case 'lnn_page_price':
+        $meta_array['price'] = $meta->meta_value;
+        break;
+      case 'lnn_page_remaining':
+        $meta_array['remaining'] = $meta->meta_value;
+        break;
+      case 'lnn_page_subtitle':
+        $meta_array['subtitle'] = $meta->meta_value;
+        break;
+      case 'lnn_page_discounts':
+        $meta_array['discounts'] = $meta->meta_value;
+        break;
+      case 'lnn_page_dates':
+        $meta_array['dates'] = $meta->meta_value;
+        break;
+    }
+  }
+  return $meta_array;
 }
 
 function la_nave_nodriza_setup() {

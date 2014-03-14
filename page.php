@@ -16,7 +16,10 @@
 	<?php while ( have_posts() ) : the_post(); ?>
 	    <!-- header -->
 	    <?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-	    	<?php $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full' );?>
+	    	<?php 
+	    		$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full' );
+	    		$metadata = get_page_metadata((int)$post->ID);
+	    	?>
 	    	<? echo '<header role="banner" style="background-image:url('. $thumbnail[0] . ')">' ?>
 	    <? else :?>
 	    	<header role="banner">
@@ -28,7 +31,6 @@
 	            	<?php
 	            		$ids = get_prev_next();
 					?>
-
 					<?php if (!empty($ids['prev'])) { ?>
 		                <li>
 		                    <a href="<?php echo get_permalink($ids['prev']); ?>" class="previous">Anterior</a>
@@ -59,13 +61,13 @@
 	            <!-- course heading -->
 	            <div class="course-heading">
 	                <h1><?php the_title(); ?></h1>
-	                <h2>La fórmula secreta para explicar, convencer y vender tus ideas sin fricciones.</h2>
+	                <h2><?php echo $metadata['subtitle']; ?></h2>
 	                <div class="pricing">
 	                    <div class="call-to-action">
-	                        <a href="#" class="button">Reservar plaza <span class="availability">- Quedan 3 -</span></a>
+	                        <a href="#" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
 	                    </div>
 	                    <div class="price">
-	                        <strong>750</strong>€
+	                        <strong><?php echo $metadata['price']; ?></strong>€
 	                    </div>
 	                </div>
 	            </div>                          
@@ -74,8 +76,14 @@
 	    </header>
 	    <!-- /header --> 
 		<div id="main" role="main">
-
-			<?php the_content(); ?>
+			<!-- content -->
+			<?php
+				$content = split_content();
+				echo $content[0];
+				get_template_part('sticky-sidebar');
+				echo $content[1];
+			?>
+			<!-- /content -->
 			<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 
 			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>

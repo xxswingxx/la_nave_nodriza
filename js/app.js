@@ -12,6 +12,8 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
+    $.lockfixed('.col.sticky-parent', {offset: {top: 10, bottom: $(document).height() - ($("#main").height() + $('header').height()) }});
+
     $("a[href^=#]").click(function(){
         var link = $(this).attr("href");
         var scroll = $(link).offset().top;
@@ -19,6 +21,7 @@ $(window).load(function(){
         $("html, body").animate({scrollTop:scroll},{duration:500});
         return false;
     });
+
     $('input').each(function(){
         var currentValue = $(this).val();
         if(($(this).attr('type') != "submit")){
