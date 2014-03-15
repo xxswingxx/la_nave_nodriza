@@ -16,7 +16,7 @@
                 
                 <!-- form sent successfully -->             
                 <div class="success">
-                    <img src="img/done.png" alt="done">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/done.png" alt="done">
                     <h2>¡Muchas gracias!</h2>
                     <h3>Hemos recibido el formulario correctamente. <span class="br">Pronto nos pondremos en contacto contigo ;-)</span></h3>
                 </div>
@@ -54,12 +54,10 @@
                                 <small class="error">Campo necesario</small>
                             </div>
                             <div class="field-block inline-fields">
-                                <label>Déjanos al menos tu email para que podamos contactar contigo</label>
-                                <div class="double-input">
-                                    <input type="text" value="Un email" name="entry.897595538" id="entry_897595538" aria-required="true">
-                                    <input type="text" value="Un teléfono" name="entry.1188903209" id="entry_1188903209" aria-required="true">
-                                    <small class="error">Campo obligatorio</small>
-                                </div>
+                                <label for="email">Déjanos al menos tu email para que podamos contactar contigo</label>
+                                <input id="email" name="entry.897595538" type="email" placeholder="Un email"  aria-required="true">
+                                <input id="tel" name="entry.1188903209" type="tel" placeholder="Un teléfono">
+                                <small class="error">Campo obligatorio</small>
                             </div>
                             <div class="field-block">
                                 <label for="interested">Estás interesado en…</label>

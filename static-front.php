@@ -219,5 +219,4 @@
             </div>
         </section>
 
-        <?php get_template_part( 'contact-form', 'page' ); ?>
-        <?php get_footer(); ?>
+        <?php get_template_part( 'contact-form-footer', 'page' ); ?>
