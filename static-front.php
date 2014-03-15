@@ -132,7 +132,7 @@
                         <div class="col">
                             <div class="image">
                                 <?php $metadata = get_page_metadata($pages[$i]->ID);
-                                    $thumbnail = get_thumbnail($pages[$i]->ID)
+                                    $thumbnail = get_thumbnail($pages[$i]->ID, 'medium')
                                 ?>
                                 <?php if($thumbnail != false) { ?>
                                     <img src="<?php echo $thumbnail[0] ?>" >
@@ -169,7 +169,7 @@
                             <div class="col">
                                 <div class="image">
                                     <?php $metadata = get_page_metadata($pages[$j]->ID);
-                                        $thumbnail = get_thumbnail($pages[$j]->ID)
+                                        $thumbnail = get_thumbnail($pages[$j]->ID, 'medium')
                                     ?>
                                     <?php if($thumbnail != false) { ?>
                                         <img src="<?php echo $thumbnail[0] ?>" >

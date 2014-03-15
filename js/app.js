@@ -15,6 +15,7 @@ $(window).load(function(){
     $('nav').find('a[href*='+window.location.hash+']').parent().addClass('active');
 
     $.lockfixed('.col.sticky-parent', {offset: {top: 70, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
+    
     $(".dropdown-toggle").on('click', function(e) {
         e.stopPropagation();
         return $(".dropdown-menu").toggle();
@@ -23,7 +24,7 @@ $(window).load(function(){
     $("#logo a").click(function(){
         $("nav").find('.active').removeClass('active');
     });
-    
+
     $("nav a[href^=#]").click(function(){
         $("nav").find('.active').removeClass('active');
         $(this).parent().addClass('active');
