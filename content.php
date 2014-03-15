@@ -11,7 +11,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+
+	<?php 
+		$thumbnail = ( has_post_thumbnail() && ! post_password_required() ) ? wp_get_attachment_image_src(get_post_thumbnail_id(), 'full' ) : array(0 => '')
+	?>
+	<header class="entry-header" role="banner" style="background-image:url(<?php echo $thumbnail[0] ?>)">
 		<?php if ( is_single() ) : ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		<?php else : ?>
@@ -19,18 +23,11 @@
 				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 			</h1>
 		<?php endif; // is_single() ?>
-		
-		<div class="entry-meta">
-			<?php la_nave_nodriza_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'la_nave_nodriza' ), '<span class="edit-link">', '</span>' ); ?>
-		</div><!-- .entry-meta -->
-		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-		<div class="entry-thumbnail">
-			<?php the_post_thumbnail(); ?>
-		</div>
-		<?php endif; ?>
 	</header><!-- .entry-header -->
-
+	<div class="entry-meta">
+		<?php la_nave_nodriza_entry_meta(); ?>
+		<?php edit_post_link( __( 'Edit', 'la_nave_nodriza' ), '<span class="edit-link">', '</span>' ); ?>
+	</div><!-- .entry-meta -->
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>

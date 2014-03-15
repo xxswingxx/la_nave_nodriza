@@ -33,6 +33,6 @@ get_header(); ?>
 				<?php endif; ?>
 			</div>
 		</section>
-
+		<?php get_search_form(); ?>
 		<?php get_template_part( 'contact-form', 'page' ); ?>
 		<?php get_footer(); ?>
