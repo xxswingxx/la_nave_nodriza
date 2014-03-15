@@ -19,10 +19,10 @@
 	    	<?php 
 	    		$thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full' );
 	    		$metadata = get_page_metadata((int)$post->ID);
+                echo '<header role="banner" style="background-image:url('. $thumbnail[0] . ')">';
 	    	?>
-	    	<? echo '<header role="banner" style="background-image:url('. $thumbnail[0] . ')">' ?>
 	    <? else :?>
-	    	<header role="banner">
+			<header role="banner">
 	    <?php endif; ?>
 	        <div class="content">       
 

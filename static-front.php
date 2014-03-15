@@ -217,5 +217,6 @@
                 </div>
             </div>
         </section>
-
-        <?php get_template_part( 'contact-form-footer', 'page' ); ?>
+    </div>
+    
+    <?php get_template_part( 'contact-form-footer', 'page' ); ?>
