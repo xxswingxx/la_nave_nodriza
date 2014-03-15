@@ -89,8 +89,7 @@
 			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
 		</div>		
 	<?php endwhile; ?>
-
-        <!-- /course info -->                 
+    <!-- /course info -->                 
     <hr>
     <!-- more courses -->                 
     <?php get_template_part( 'related-pages', 'page' ); ?>   

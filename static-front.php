@@ -126,7 +126,8 @@
             <!-- active workshops -->
             <div class="content" role="complementary">
                 <h1>— Nuestras singladuras —</h1>
-                <div class="three-col">
+                <!-- first pages row-->
+                    <div class="three-col">
                     <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
                         <div class="col">
                             <div class="image">
@@ -147,8 +148,8 @@
                             <span><? echo $metadata['extra'] ?></span>
                         </div>
                     <? } ?>
-                </div>
-
+                    </div>
+                <!-- first pages row-->
                 <div class="three-col">
                     <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
                         <div class="col">
@@ -161,46 +162,45 @@
                         </div>
                     <? } ?>
                 </div>
+                <!-- second pages row-->
                 <?php if ($length > 3) { ?>
-                    <div class="three-block">
-                        <div class="three-column">
-                            <?php for($j = $i; $j < $length; $j++){ ?>
-                                <div class="column first">
-                                    <div class="program-img">
-                                        <?php $metadata = get_page_metadata($pages[$j]->ID);
-                                            $thumbnail = get_thumbnail($pages[$j]->ID)
-                                        ?>
-                                        <?php if($thumbnail != false) { ?>
-                                            <img src="<?php echo $thumbnail[0] ?>" >
-                                        <? } ?>
-                                        <h2> 
-                                            <?php if (isset($metadata['state'])){ ?>
-                                                <span> <?php echo $metadata['state'] ?></span>
-                                            <? } ?>
-                                            <? echo $metadata['type']; ?>  
-                                        </h2>
-                                        <h3>
-                                            <? echo $pages_links[$j]; ?> 
-                                            <span><? echo $metadata['extra'] ?></span>
-                                        </h3>
-                                    </div>
+                    <div class="three-col">
+                        <?php for($j = $i; $j < $length; $j++){ ?>
+                            <div class="col">
+                                <div class="image">
+                                    <?php $metadata = get_page_metadata($pages[$j]->ID);
+                                        $thumbnail = get_thumbnail($pages[$j]->ID)
+                                    ?>
+                                    <?php if($thumbnail != false) { ?>
+                                        <img src="<?php echo $thumbnail[0] ?>" >
+                                    <? } ?>
                                 </div>
-                            <? } ?>
-                        </div>
-                        <div class="three-column">
+                                <h2> 
+                                    <?php if (isset($metadata['state'])){ ?>
+                                        <span> <?php echo $metadata['state'] ?></span>
+                                    <? } ?>
+                                    <? echo $metadata['type']; ?>  
+                                </h2>
+                                <h3>
+                                    <? echo $pages_links[$j]; ?> 
+                                    <span><? echo $metadata['extra'] ?></span>
+                                </h3>
+                            </div>
+                        <? } ?>
+                        <div class="three-col">
                             <?php for($j = $i; $j < $length; $j++){ ?>
-                                <div class="column first">
+                                <div class="col">
                                     <p> 
                                         <? echo $pages[$j]->post_excerpt; ?>
                                         </br>
                                         <a href="<? echo get_permalink($pages[$j]->ID); ?>"> Leer más </a>.
                                    </p>
-                           
                                 </div>
                             <? } ?>
                         </div>
                     </div>
                 <? } ?>
+                <!-- /second pages row -->
             </div>
             <!-- /active workshops -->
         </section>
