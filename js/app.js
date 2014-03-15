@@ -20,6 +20,10 @@ $(window).load(function(){
         return $(".dropdown-menu").toggle();
     });
 
+    $("#logo a").click(function(){
+        $("nav").find('.active').removeClass('active');
+    });
+    
     $("nav a[href^=#]").click(function(){
         $("nav").find('.active').removeClass('active');
         $(this).parent().addClass('active');
