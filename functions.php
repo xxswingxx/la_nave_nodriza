@@ -23,10 +23,8 @@
  * @since La Nave Nodriza 1.0
  */
 /**
-* Split the content
+* Split the content at the more tag and return an array
 **/
-
-// split content at the more tag and return an array
 function split_content() {
   global $more;
   $more = true;

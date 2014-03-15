@@ -21,17 +21,17 @@
     <div class="content">
         <div id="what" class="flexslider carrousel">
             <ul class="slides">
-                <li><span>Image 01</span></li>
-                <li><span>Image 02</span></li>
-                <li><span>Image 03</span></li>
-                <li><span>Image 04</span></li>
-                <li><span>Image 05</span></li>
-                <li><span>Image 06</span></li>
-                <li><span>Image 07</span></li>
-                <li><span>Image 08</span></li>
-                <li><span>Image 09</span></li>
-                <li><span>Image 10</span></li>
-                <li><span>Image 11</span></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/01.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/02.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/03.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/04.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/05.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/06.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/07.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/08.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/09.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/10.jpg"></li>
+                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/11.jpg"></li>
             </ul>
             <div class="what-it-is">
                 <div class="what-explanation">
@@ -122,46 +122,44 @@
                  </div>
             </div>
         </section>
-        <section id="program" class="">
-            <div class="section-content">
+        <section id="program" class="more">
+            <!-- active workshops -->
+            <div class="content" role="complementary">
                 <h1>— Nuestras singladuras —</h1>
-                <div class="three-block">
-                    <div class="three-column">
-                        <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
-                            <div class="column first">
-                                <div class="program-img">
-                                    <?php $metadata = get_page_metadata($pages[$i]->ID);
-                                        $thumbnail = get_thumbnail($pages[$i]->ID)
-                                    ?>
-                                    <?php if($thumbnail != false) { ?>
-                                        <img src="<?php echo $thumbnail[0] ?>" >
-                                    <? } ?>
-                                    <h2> 
-                                        <?php if (isset($metadata['state'])){ ?>
-                                            <span> <?php echo $metadata['state'] ?></span>
-                                        <? } ?>
-                                        <? echo $metadata['type']; ?>  
-                                    </h2>
-                                    <h3>
-                                        <? echo $pages_links[$i]; ?> 
-                                        <span><? echo $metadata['extra'] ?></span>
-                                    </h3>
-                                </div>
+                <div class="three-col">
+                    <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
+                        <div class="col">
+                            <div class="image">
+                                <?php $metadata = get_page_metadata($pages[$i]->ID);
+                                    $thumbnail = get_thumbnail($pages[$i]->ID)
+                                ?>
+                                <?php if($thumbnail != false) { ?>
+                                    <img src="<?php echo $thumbnail[0] ?>" >
+                                <? } ?>
                             </div>
-                        <? } ?>
-                    </div>
-                    <div class="three-column">
-                        <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
-                            <div class="column first">
-                                <p> 
-                                    <? echo $pages[$i]->post_excerpt; ?>
-                                    </br>
-                                    <a href="<? echo get_permalink($pages[$i]->ID); ?>"> Leer más </a>.
-                               </p>
-                       
-                            </div>
-                        <? } ?>
-                    </div>
+                            <h2> 
+                                <?php if (isset($metadata['state'])){ ?>
+                                    <span> <?php echo $metadata['state'] ?></span>
+                                <? } ?>
+                                <? echo $metadata['type']; ?>  
+                            </h2>
+                            <h3><? echo $pages_links[$i]; ?></h3>
+                            <span><? echo $metadata['extra'] ?></span>
+                        </div>
+                    <? } ?>
+                </div>
+
+                <div class="three-col">
+                    <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
+                        <div class="col">
+                            <p> 
+                                <? echo $pages[$i]->post_excerpt; ?>
+                                </br>
+                                <a href="<? echo get_permalink($pages[$i]->ID); ?>"> Leer más </a>.
+                           </p>
+                   
+                        </div>
+                    <? } ?>
                 </div>
                 <?php if ($length > 3) { ?>
                     <div class="three-block">
@@ -204,6 +202,7 @@
                     </div>
                 <? } ?>
             </div>
+            <!-- /active workshops -->
         </section>
         <section id="to-whom" class="">
             <div class="section-content">
