@@ -83,7 +83,7 @@
                     <div class="column first">
                         <div class="who-info">
                             <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/ignacio-buenhombre.jpg" alt="Ignacio Buenhombre">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_02.jpg" alt="Ignacio Buenhombre">
                             </div>
                             <div class="name">
                                 <h3>Ignacio Buenhombre</h3>
@@ -96,7 +96,7 @@
                     <div class="column">
                         <div class="who-info">
                             <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/juan-leal.jpg" alt="Juan Leal">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_03.jpg" alt="Juan Leal">
                             </div>
                             <div class="name">
                                 <h3>Juan Leal</h3>
@@ -109,7 +109,7 @@
                     <div class="column last">
                         <div class="who-info">
                             <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/ludita.jpg" alt="Isabel Inés (Ludita)">
+                                <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_04.jpg" alt="Isabel Inés (Ludita)">
                             </div>
                             <div class="name">
                                 <h3>Isabel Inés (Ludita)</h3>
