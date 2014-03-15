@@ -69,9 +69,9 @@
                 <!-- logo -->
                 <div id="logo">
                     <?php if (is_front_page()) { ?>
-                        <a href="<?php echo get_home_url() ?>#what" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
-                    <? } else { ?>
                         <a href="#what" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
+                    <? } else { ?>
+                        <a href="<?php echo get_home_url() ?>#what" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
                     <? } ?>
                     <div id="claim"><a href="#">Todos tenemos algo que aprender</a></div>
                 </div> 
