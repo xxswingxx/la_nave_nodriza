@@ -68,31 +68,20 @@
             <div class="content">
                 <!-- logo -->
                 <div id="logo">
-                    <?php if (is_front_page()) { ?>
-                        <a href="#what" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
-                    <? } else { ?>
-                        <a href="<?php echo get_home_url() ?>#what" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
-                    <? } ?>
-                    <div id="claim"><a href="#">Todos tenemos algo que aprender</a></div>
+                    <?php $host = is_front_page() ? '': get_home_url() ?>
+                    <a href="<?php echo $host ?>#what" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
+                    <div id="claim"><a href="<?php echo $host ?>#what">Todos tenemos algo que aprender</a></div>
                 </div> 
                 <!-- /logo -->
 
                 <!-- global navigation -->
                 <nav role="navigation">
-                    <ul>
-                        <?php if (is_front_page()) { ?>
-                            <li><a href="#la-nave" accesskey="2">Qué es</a></li>
-                            <li><a href="#founders" accesskey="3">Quién está detrás</a></li>
-                            <li><a href="#program" accesskey="4">Qué ofrecemos</a></li>
-                            <li><a href="#to-whom" accesskey="5">Para quién</a></li>
-                            <li><a href="#contact" accesskey="6">Contacta</a></li>
-                        <? } else { ?>
-                            <li><a href="<?php echo get_home_url() ?>#la-nave" accesskey="2">Qué es</a></li>
-                            <li><a href="<?php echo get_home_url() ?>#founders" accesskey="3">Quién está detrás</a></li>
-                            <li><a href="<?php echo get_home_url() ?>#program" accesskey="4">Qué ofrecemos</a></li>
-                            <li><a href="<?php echo get_home_url() ?>#to-whom" accesskey="5">Para quién</a></li>
-                            <li><a href="<?php echo get_home_url() ?>#contact" accesskey="">Contacta</a></li>
-                        <? } ?>
+                    <ul> 
+                        <li><a href="<?php echo $host ?>#la-nave" accesskey="2">Qué es</a></li>
+                        <li><a href="<?php echo $host ?>#founders" accesskey="3">Quién está detrás</a></li>
+                        <li><a href="<?php echo $host ?>#program" accesskey="4">Qué ofrecemos</a></li>
+                        <li><a href="<?php echo $host ?>#to-whom" accesskey="5">Para quién</a></li>
+                        <li><a href="<?php echo $host ?>#contact" accesskey="6">Contacta</a></li>       
                         <li class="<?php echo (is_home() ? 'active' :  '') ?>">
                             <a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" accesskey="7">Bitácora</a>
                         </li>
