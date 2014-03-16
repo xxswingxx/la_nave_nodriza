@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#what").flexslider({
+    $(".flexslider.carrousel").flexslider({
         animation: "fade",
         animationLoop: true,
         slideshow: true,

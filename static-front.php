@@ -18,27 +18,26 @@
 
     get_header(); ?>
 
-    <div class="content">
-        <div id="what" class="flexslider carrousel">
+    <!-- slider -->
+    <header role="banner" id="home">
+        <div class="flexslider carrousel">
             <ul class="slides">
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/01.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/02.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/03.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/04.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/05.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/06.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/07.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/08.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/09.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/10.jpg"></li>
-                <li><img src="<?php echo get_template_directory_uri(); ?>/images/carrousel/11.jpg"></li>
+                <li><span>01></span></li>
+                <li><span>02></span></li>
+                <li><span>03</span></li>
+                <li><span>04</span></li>
+                <li><span>05</span></li>
+                <li><span>06</span></li>
+                <li><span>07</span></li>
+                <li><span>08</span></li>
+                <li><span>09</span></li>
+                <li><span>10></span></li>
+                <li><span>11</span></li>
             </ul>
-            <div class="what-it-is">
-                <div class="what-explanation">
-                    <h1>
-                        Todos tenemos algo que aprender
-                    </h1>
-                    <div class="extra">
+            <div class="splash-wrapper">
+                <div class="splash">
+                    <h1>Todos tenemos algo que aprender</h1>
+                    <div class="latest">
                         <?php 
                             $pages = get_active_list();
                             $length = count($pages);
@@ -48,26 +47,47 @@
                             <? $metadata = get_page_metadata($pages[$i]->ID); ?>
                             <h2>
                                 <?php if (isset($metadata['state'])){ ?>
-                                    <span> <?php echo $metadata['state'] ?></span>
+                                    <em> <?php echo $metadata['state'] ?></em>
                                  <? } ?>
-                                <?php echo $metadata['type'] . ': ' .  $pages_links[$i]; ?> 
+                                <?php echo $pages_links[$i]; ?> 
                             </h2>
                         <? } ?>
-                    </div><br>
-                    <a href="#contact">
-                    <div class="button">Contáctanos</div></a>
+                    </div>
+                    <div class="contact-button">
+                        <a href="#contact" class="button">Contáctanos</a>
+                    </div>
                 </div>
+                <!-- share -->
+                <div id="fb-root"></div>
+                <script>(function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&appId=140978915248";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+                <div class="share">
+                    <div class="fb-like" data-href="http://www.lanavenodriza.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                </div>
+                <!-- /share -->   
             </div>
         </div>
-        <section id="la-nave">
-            <div class="section-content">
+    </header>
+    <!-- /slider --> 
+    
+    <hr>
+
+    <div id="main" role="main">
+      
+        <section id="la-nave-nodriza">
+            <div class="content">
                 <h1>— ¿Qué es Lanavenodriza.com? —</h1>
-                <div class="double-column">
-                    <div class="column">
+                <div class="two-col">
+                    <div class="col">
                         <p>Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender. Perseguimos la idea de crear un entorno donde estudiantes y ponentes trabajen juntos, dando forma a un modelo educativo que sea útil tanto a la academia como a la industria, y donde la práctica tenga un papel fundamental.</p>
                         <p>Los que organizamos esto llevamos a nuestras espaldas varios años impartiendo formación en otros másters, talleres, cursos y seminarios de diversas escuelas y universidades. Somos amigos, y la gente que sale de aquí forma parte de ese nuevo núcleo de amistad.</p>
                     </div>
-                    <div class="column">
+                    <div class="col">
                         <blockquote>
                             “Queremos crear un espacio de aprendizaje artesanal, humano, promovido por gente normal y honesta, con amplia experiencia en el sector digital.”
                         </blockquote>
@@ -76,58 +96,58 @@
                 </div>
             </div>
         </section>
-        <section id="founders" class="grey">
-            <div class="section-content">
+        
+        <hr>
+
+        <section class="highlighted-gray three-col" id="founders">
+            <div class="content">
                 <h1>— A los mandos del timón —</h1>
-                <div class="three-column">
-                    <div class="column first">
-                        <div class="who-info">
-                            <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_02.jpg" alt="Ignacio Buenhombre">
-                            </div>
-                            <div class="name">
-                                <h3>Ignacio Buenhombre</h3>
-                            </div>
-                            <div class="description">
-                                Haciendo siempre honor a su apellido, Ignacio es de esas personas que realmente saben transmitir confianza al equipo. Los años de profesión (y la barba) le han convertido en un viejo lobo al que da gusto escuchar, y sus batallitas siempre esconden sabias enseñanzas.
-                            </div>
-                        </div>
+                <!-- buenhombre -->                 
+                <div class="col">
+                    <div class="image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_02.jpg" alt="Ignacio Buenhombre">
                     </div>
-                    <div class="column">
-                        <div class="who-info">
-                            <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_03.jpg" alt="Juan Leal">
-                            </div>
-                            <div class="name">
-                                <h3>Juan Leal</h3>
-                            </div>
-                            <div class="description">
-                                Juan ha navegado por todo el mundo intentando hacer la tecnología más humana y amigable, y basta pasarse por <a href="http://www.seisdeagosto.com/indica/" target="_blank">su blog</a> para ver la multitud de pecios que ha encontrado a lo largo de todas estas singladuras. Ahora espera repartir todo su botín en Lanavenodriza.com.
-                            </div>
-                        </div>
+                    <div class="info">
+                        <h2>Ignacio Buenhombre</h2>
+                        <p>Haciendo siempre honor a su apellido, Ignacio es de esas personas que realmente saben transmitir confianza al equipo. Los años de profesión (y la barba) le han convertido en un viejo lobo al que da gusto escuchar, y sus batallitas siempre esconden sabias enseñanzas.</p>
                     </div>
-                    <div class="column last">
-                        <div class="who-info">
-                            <div class="avatar">
-                                <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_04.jpg" alt="Isabel Inés (Ludita)">
-                            </div>
-                            <div class="name">
-                                <h3>Isabel Inés (Ludita)</h3>
-                            </div>
-                            <div class="description">
-                                Aventurera de corazón, Isa lleva años viajando por los remotos mares del diseño. Ha pasado de aprendiz a maestra casi sin darse cuenta: cuanto más sabe, más ve todo lo que le falta por aprender. Lanavenodriza.com. le permite seguir explorando tierras desconocidas.
-                            </div>
-                        </div>
+                </div>
+                <!-- /buenhombre -->                 
+                
+                <!-- leal --> 
+                <div class="col">
+                    <div class="image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_03.jpg" alt="Ignacio Buenhombre">
                     </div>
-                 </div>
+                    <div class="info">
+                        <h2>Juan Leal</h2>
+                        <p>Juan ha navegado por todo el mundo intentando hacer la tecnología más humana y amigable, y basta pasarse por <a href="http://www.seisdeagosto.com/indica/" rel="external">su blog</a> para ver la multitud de pecios que ha encontrado a lo largo de todas estas singladuras. Ahora espera repartir todo su botín en Lanavenodriza.com.</p>                             
+                    </div>
+                </div>
+                <!-- /leal --> 
+
+                <!-- ludita --> 
+                <div class="col">
+                    <div class="image">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/teachers/sample_04.jpg" alt="Ignacio Buenhombre">
+                    </div>
+                    <div class="info">
+                        <h2>Isabel Inés (Ludita)</h2>
+                        <p>Aventurera de corazón, Isa lleva años viajando por los remotos mares del diseño. Ha pasado de aprendiz a maestra casi sin darse cuenta: cuanto más sabe, más ve todo lo que le falta por aprender. Lanavenodriza.com. le permite seguir explorando tierras desconocidas.</p>
+                    </div>
+                </div>
+                <!-- /ludita -->
             </div>
         </section>
-        <section id="program" class="more">
-            <!-- active workshops -->
-            <div class="content" role="complementary">
+
+        <hr>
+
+        <!-- courses -->
+        <section class="highlighted-dark" id="courses">
+            <div class="content">
                 <h1>— Nuestras singladuras —</h1>
                 <!-- first pages row-->
-                    <div class="three-col">
+                <div class="three-col">
                     <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
                         <div class="col">
                             <div class="image">
@@ -138,18 +158,20 @@
                                     <img src="<?php echo $thumbnail[0] ?>" >
                                 <? } ?>
                             </div>
-                            <h2> 
-                                <?php if (isset($metadata['state'])){ ?>
-                                    <span> <?php echo $metadata['state'] ?></span>
-                                <? } ?>
-                                <? echo $metadata['type']; ?>  
-                            </h2>
-                            <h3><? echo $pages_links[$i]; ?></h3>
-                            <span><? echo $metadata['extra'] ?></span>
+                            <div class="course-intro">
+                                <a href="<?php echo get_permalink($pages[$i]->ID) ?>">
+                                    <?php if (isset($metadata['state'])){ ?>
+                                        <em> <?php echo $metadata['state'] ?></em>
+                                    <? } ?>
+                                    <? echo $metadata['type']; ?>
+                                </a>
+                            </div> 
+                            <h2><? echo $pages_links[$i]; ?></h2>
+                            <h3><? echo $metadata['extra'] ?></h3>
                         </div>
                     <? } ?>
-                    </div>
-                <!-- first pages row-->
+                </div>
+                <!-- /first pages row-->
                 <div class="three-col">
                     <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
                         <div class="col">
@@ -175,16 +197,16 @@
                                         <img src="<?php echo $thumbnail[0] ?>" >
                                     <? } ?>
                                 </div>
-                                <h2> 
-                                    <?php if (isset($metadata['state'])){ ?>
-                                        <span> <?php echo $metadata['state'] ?></span>
-                                    <? } ?>
-                                    <? echo $metadata['type']; ?>  
-                                </h2>
-                                <h3>
-                                    <? echo $pages_links[$j]; ?> 
-                                    <span><? echo $metadata['extra'] ?></span>
-                                </h3>
+                                <div class="course-intro">
+                                    <a href="<?php echo get_permalink($pages[$i]->ID) ?>">
+                                        <?php if (isset($metadata['state'])){ ?>
+                                            <em> <?php echo $metadata['state'] ?></em>
+                                        <? } ?>
+                                        <? echo $metadata['type']; ?>
+                                    </a>
+                                </div> 
+                                <h2><? echo $pages_links[$j]; ?></h2>
+                                <h3><? echo $metadata['extra'] ?></h3>
                             </div>
                         <? } ?>
                         <div class="three-col">
@@ -204,16 +226,17 @@
             </div>
             <!-- /active workshops -->
         </section>
-        <section id="to-whom" class="">
-            <div class="section-content">
+        <!-- /courses -->
+        <hr>
+
+        <section class="two-col" id="who-is-for">
+            <div class="content">
                 <h1>— ¿A quién está dirigido? —</h1>
-                <div class="double-column">
-                    <div class="column">
-                        <p>Buscamos gente ilusionada con la idea de compartir nuestras singladuras, con ganas de aprender y de aportar. Por cursos anteriores han pasado psicólogos, ilustradores, diseñadores gráficos, programadores, gente de IT, de marketing, newbies y lobos de mar… Creemos que en la variedad está gran parte de la esencia de todo esto.</p>
-                    </div>
-                    <div class="column">
-                        <p>Navegamos en torno al diseño y la tecnología, por eso todos nuestros talleres y cursos están ligados de una manera u otra al diseño de productos digitales. Queremos en la Nave embarquen personas interesadas en aprender, compartir y, por supuesto, enseñarnos un poco más de todo esto.</p>
-                    </div>
+                <div class="col">
+                    <p>Buscamos gente ilusionada con la idea de compartir nuestras singladuras, con ganas de aprender y de aportar. Por cursos anteriores han pasado psicólogos, ilustradores, diseñadores gráficos, programadores, gente de IT, de marketing, newbies y lobos de mar… Creemos que en la variedad está gran parte de la esencia de todo esto.</p>
+                </div>
+                <div class="col">
+                    <p>Navegamos en torno al diseño y la tecnología, por eso todos nuestros talleres y cursos están ligados de una manera u otra al diseño de productos digitales. Queremos en la Nave embarquen personas interesadas en aprender, compartir y, por supuesto, enseñarnos un poco más de todo esto.</p>
                 </div>
             </div>
         </section>
