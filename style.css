@@ -239,9 +239,7 @@ p:last-child { padding-bottom: 0; }
           box-sizing: border-box;
     margin: 30px 0 20px;
 }
-.two-col .col.right-content {
-    float: right;
-}
+
 .two-col .col:first-child {
     padding-left: 0px;
     padding-right: 20px;    
@@ -818,7 +816,6 @@ footer a {
 .left-sidebar .sticky-parent { position: relative; }
 .left-sidebar .sticky-parent .sticky-box { position: absolute; }
 */
-
 
 /* custom select */
 

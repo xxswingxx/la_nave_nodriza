@@ -14,7 +14,7 @@ $(document).ready(function() {
 $(window).load(function(){
     $('nav').find('a[href*='+window.location.hash+']').parent().addClass('active');
 
-    $.lockfixed('.col.sticky-parent', {offset: {top: 70, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
+    $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
     
     $(".dropdown-toggle").on('click', function(e) {
         e.stopPropagation();
