@@ -171,7 +171,6 @@
                         </div>
                     <? } ?>
                 </div>
-                <!-- /first pages row-->
                 <div class="three-col">
                     <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
                         <div class="col">
@@ -184,44 +183,43 @@
                         </div>
                     <? } ?>
                 </div>
+                <!-- /first pages row-->
                 <!-- second pages row-->
-                <?php if ($length > 3) { ?>
-                    <div class="three-col">
-                        <?php for($j = $i; $j < $length; $j++){ ?>
-                            <div class="col">
-                                <div class="image">
-                                    <?php $metadata = get_page_metadata($pages[$j]->ID);
-                                        $thumbnail = get_thumbnail($pages[$j]->ID, 'medium')
-                                    ?>
-                                    <?php if($thumbnail != false) { ?>
-                                        <img src="<?php echo $thumbnail[0] ?>" >
-                                    <? } ?>
-                                </div>
-                                <div class="course-intro">
-                                    <a href="<?php echo get_permalink($pages[$i]->ID) ?>">
-                                        <?php if (isset($metadata['state'])){ ?>
-                                            <em> <?php echo $metadata['state'] ?></em>
-                                        <? } ?>
-                                        <? echo $metadata['type']; ?>
-                                    </a>
-                                </div> 
-                                <h2><? echo $pages_links[$j]; ?></h2>
-                                <h3><? echo $metadata['extra'] ?></h3>
+                <div class="three-col">
+                    <?php for($j = $i; $j < $length; $j++){ ?>
+                        <div class="col">
+                            <div class="image">
+                                <?php $metadata = get_page_metadata($pages[$j]->ID);
+                                    $thumbnail = get_thumbnail($pages[$j]->ID, 'medium')
+                                ?>
+                                <?php if($thumbnail != false) { ?>
+                                    <img src="<?php echo $thumbnail[0] ?>" >
+                                <? } ?>
                             </div>
-                        <? } ?>
-                        <div class="three-col">
-                            <?php for($j = $i; $j < $length; $j++){ ?>
-                                <div class="col">
-                                    <p> 
-                                        <? echo $pages[$j]->post_excerpt; ?>
-                                        </br>
-                                        <a href="<? echo get_permalink($pages[$j]->ID); ?>"> Leer más </a>.
-                                   </p>
-                                </div>
-                            <? } ?>
+                            <div class="course-intro">
+                                <a href="<?php echo get_permalink($pages[$i]->ID) ?>">
+                                    <?php if (isset($metadata['state'])){ ?>
+                                        <em> <?php echo $metadata['state'] ?></em>
+                                    <? } ?>
+                                    <? echo $metadata['type']; ?>
+                                </a>
+                            </div> 
+                            <h2><? echo $pages_links[$j]; ?></h2>
+                            <h3><? echo $metadata['extra'] ?></h3>
                         </div>
-                    </div>
-                <? } ?>
+                    <? } ?>
+                </div>
+                <div class="three-col">
+                    <?php for($j = $i; $j < $length; $j++){ ?>
+                        <div class="col">
+                            <p> 
+                                <? echo $pages[$j]->post_excerpt; ?>
+                                </br>
+                                <a href="<? echo get_permalink($pages[$j]->ID); ?>"> Leer más </a>.
+                           </p>
+                        </div>
+                    <? } ?>
+                </div>
                 <!-- /second pages row -->
             </div>
             <!-- /active workshops -->
