@@ -10,11 +10,14 @@
         <h3>Narrativa, UX, Talleres express…</h3>
 
         <div class="three-col">
-            <?php for($i = 0; $i < $length && $i < 3; $i++){ ?>
+            <?php $printed = 0 ?>
+            <?php for($i = 0; $i < $length; $i++){ ?>
+                <?php if ($printed == 3) { break; } ?>
                 <?php if ((int)$pages[$i]->ID != $current_id) { ?>
                     <div class="col">
                         <div class="image">
                                 <?php 
+                                    $printed++;
                                     $metadata = get_page_metadata($pages[$i]->ID);
                                     $thumbnail = get_thumbnail($pages[$i]->ID)
                                 ?>

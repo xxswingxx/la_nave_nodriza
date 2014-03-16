@@ -14,7 +14,7 @@
  * @since La Nave Nodriza 1.0
  */
 
-get_header(); ?>
+	get_header(); ?>
 
 	<div class="content">
 		<section id="articles">
@@ -34,4 +34,5 @@ get_header(); ?>
 			</div>
 		</section>
 		<?php get_search_form(); ?>
-		<?php get_footer(); ?>
+	</div>
+	<?php get_footer(); ?>
