@@ -12,6 +12,13 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
+    $( window ).konami({
+        cheat: function() {
+            window.location.replace('http://www.youtube.com/v/dQw4w9WgXcQ&autoplay=1')
+        }
+    });
+
+
     $('a[rel^="external"]').click( function() {
         window.open( $(this).attr('href') );
         return false;
