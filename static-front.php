@@ -182,10 +182,11 @@
                         </div>
                     <? } ?>
                 </div>
+
                 <!-- /first pages row-->
                 <!-- second pages row-->
                 <div class="three-col">
-                    <?php for($j = $i; $j < $length; $j++){ ?>
+                    <?php for($j = $i; $j < $length && false; $j++){ ?>
                         <div class="col">
                             <div class="image">
                                 <?php $metadata = get_page_metadata($pages[$j]->ID);
@@ -209,7 +210,7 @@
                     <? } ?>
                 </div>
                 <div class="three-col">
-                    <?php for($j = $i; $j < $length; $j++){ ?>
+                    <?php for($j = $i; $j < $length  && false; $j++){ ?>
                         <div class="col">
                             <p> 
                                 <? echo $pages[$j]->post_excerpt; ?>
