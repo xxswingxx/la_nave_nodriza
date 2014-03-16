@@ -31,16 +31,17 @@
 	            	<?php
 	            		$ids = get_prev_next();
 					?>
-					<?php if (!empty($ids['prev'])) { ?>
-		                <li>
-		                    <a href="<?php echo get_permalink($ids['prev']); ?>" class="previous">Anterior</a>
-		                </li>
-		            <?php } ?>
+					
 		            <?php if (!empty($ids['next'])) { ?>
 		                <li>
 							<a href="<?php echo get_permalink($ids['next']); ?>" class="next">Siguiente</a>
 		                </li>
-		            <?php } ?>       
+		            <?php } ?>
+		            <?php if (!empty($ids['prev'])) { ?>
+		                <li>
+		                    <a href="<?php echo get_permalink($ids['prev']); ?>" class="previous">Anterior</a>
+		                </li>
+		            <?php } ?>  
 	            </ul>
 	            <!-- /courses navigation -->
 	            
