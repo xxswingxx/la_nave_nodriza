@@ -12,6 +12,16 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
+    $('a[rel^="external"]').click( function() {
+        window.open( $(this).attr('href') );
+        return false;
+    });
+    // turn "external" classes into new window popups
+    $('a.external').click( function() {
+        window.open( $(this).attr('href') );
+        return false;
+    });
+
     $('nav').find('a[href*='+window.location.hash+']').parent().addClass('active');
 
     $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
