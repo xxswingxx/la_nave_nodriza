@@ -14,7 +14,7 @@ $(document).ready(function() {
 $(window).load(function(){
     $( window ).konami({
         cheat: function() {
-            window.location.replace('http://www.youtube.com/v/dQw4w9WgXcQ&autoplay=1')
+            window.location.replace('http://www.youtube.com/v/PDHCLjuOzXY&autoplay=1');
         }
     });
 
