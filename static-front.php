@@ -179,7 +179,6 @@
                                 </br>
                                 <a href="<? echo get_permalink($pages[$i]->ID); ?>"> Leer más </a>.
                            </p>
-                   
                         </div>
                     <? } ?>
                 </div>

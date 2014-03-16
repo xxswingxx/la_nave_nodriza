@@ -26,6 +26,12 @@ $(window).load(function(){
 
     $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
     
+    $(document).on('click', function(){
+        if ($(".dropdown-menu").is(':visible')) {
+            $(".dropdown-menu").hide();
+        }
+    })
+
     $(".dropdown-toggle").on('click', function(e) {
         e.stopPropagation();
         return $(".dropdown-menu").toggle();
