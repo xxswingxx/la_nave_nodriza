@@ -18,6 +18,10 @@ $(window).load(function(){
         }
     });
 
+    $(".contact-button a[href=#contact]").click(function(e){
+        e.preventDefault();
+        $('nav a[href=#contact]').click();
+    })
 
     $('a[rel^="external"]').click( function() {
         window.open( $(this).attr('href') );
@@ -29,7 +33,7 @@ $(window).load(function(){
         return false;
     });
 
-    $('nav').find('a[href*='+window.location.hash+']').parent().addClass('active');
+    $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
 
     $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
     
@@ -48,9 +52,11 @@ $(window).load(function(){
         $("nav").find('.active').removeClass('active');
     });
 
-    $("nav a[href^=#]").click(function(){
+    $("nav a[href^=#], #logo a").click(function(){
         $("nav").find('.active').removeClass('active');
-        $(this).parent().addClass('active');
+        if ($(this).parent().attr('id') != 'logo'){
+            $(this).parent().addClass('active');
+        }
         var link = $(this).attr("href");
         var scroll = $(link).offset().top;
             scroll = scroll-60;

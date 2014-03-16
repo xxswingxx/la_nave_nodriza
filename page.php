@@ -65,7 +65,8 @@
 	                <h2><?php echo $metadata['subtitle']; ?></h2>
 	                <div class="pricing">
 	                    <div class="call-to-action">
-	                        <a href="#" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
+	                    	<?php $call_to_action = isset($metadata['call_to_action']) ? $metadata['call_to_action'] : '#' ?>
+	                        <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
 	                    </div>
 	                    <div class="price">
 	                        <strong><?php echo $metadata['price']; ?></strong>€

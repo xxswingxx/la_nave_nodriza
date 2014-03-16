@@ -225,35 +225,11 @@ function get_page_metadata($page_id) {
   $meta_list = (array)$wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta 
                                    WHERE post_id = '{$page_id}' 
                                    AND meta_key in 
-                                   ('lnn_page_type','lnn_page_state','lnn_page_extra','lnn_page_price','lnn_page_remaining','lnn_page_subtitle','lnn_page_discounts','lnn_page_dates')");
+                                   ('lnn_page_type','lnn_page_state','lnn_page_extra','lnn_page_price','lnn_page_remaining','lnn_page_subtitle','lnn_page_discounts','lnn_page_dates','lnn_page_call_to_action')");
   $meta_array = array();
   foreach ($meta_list as $meta) {
-    switch ($meta->meta_key){
-      case 'lnn_page_type':
-        $meta_array['type'] = $meta->meta_value;
-        break;
-      case 'lnn_page_state':
-        $meta_array['state'] = $meta->meta_value;
-        break;
-      case 'lnn_page_extra':
-        $meta_array['extra'] = $meta->meta_value; 
-        break;
-      case 'lnn_page_price':
-        $meta_array['price'] = $meta->meta_value;
-        break;
-      case 'lnn_page_remaining':
-        $meta_array['remaining'] = $meta->meta_value;
-        break;
-      case 'lnn_page_subtitle':
-        $meta_array['subtitle'] = $meta->meta_value;
-        break;
-      case 'lnn_page_discounts':
-        $meta_array['discounts'] = $meta->meta_value;
-        break;
-      case 'lnn_page_dates':
-        $meta_array['dates'] = $meta->meta_value;
-        break;
-    }
+    $key = str_replace("lnn_page_","",$meta->meta_key);
+    $meta_array[$key] = $meta->meta_value;
   }
   return $meta_array;
 }

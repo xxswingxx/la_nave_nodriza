@@ -72,7 +72,7 @@
                 <!-- logo -->
                 <div id="logo">
                     <?php $host = is_front_page() ? '': get_home_url() ?>
-                    <a href="<?php echo $host ?>#" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
+                    <a href="<?php echo $host ?>#home" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
                     <div id="claim"><a href="<?php echo $host ?>#what">Todos tenemos algo que aprender</a></div>
                 </div> 
                 <!-- /logo -->
