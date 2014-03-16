@@ -22,7 +22,7 @@
                 </div>
                 <!-- /form sent successfully  -->             
     
-                <div class="two-col">
+                <div class="two-col contact-form">
                     <!-- contact address --> 
                     <div class="col">
                         <p>Y ahora sí, esto es el final. Si tenías simplemente curiosidad por saber de qué va todo esto enhorabuena por llegar hasta aquí (nos alegraremos si nos mandas unas líneas dándonos tu opinión). Si crees que puede interesarte algún taller o curso, no le des más vueltas: contáctanos y luego decide si al final te quedas o no. Aquí no se cobra nada por escribir, verdad verdadera.</p>

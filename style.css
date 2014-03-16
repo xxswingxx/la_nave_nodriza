@@ -1,7 +1,8 @@
-/**
+/*
 Theme Name: La Nave Nodriza
 Theme Description: Custom theme for La Nave Nodriza
 */
+
 /* 
 @1) RESET
 @2) COMMON
@@ -12,8 +13,8 @@ Theme Description: Custom theme for La Nave Nodriza
 @7) FORMS
 @8) FOOTER
 @9) VENDORS
+@10 MEDIA QUERIES
 */
-
 
 
 /* @1) RESET */
@@ -221,6 +222,7 @@ p:last-child { padding-bottom: 0; }
 /* main blocks */
 #navbar, header, #main, footer { width: 100%; }
 
+
 /* centered inside block */
 .content, blockquote.small-quote p {
     margin: 0 auto;
@@ -232,6 +234,7 @@ p:last-child { padding-bottom: 0; }
           box-sizing: border-box;
     padding: 0 20px;
 }
+
 
 /* two columns */
 .two-col { overflow: hidden; }
@@ -346,7 +349,7 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    background: #fff url('./images/nav_separator.png') no-repeat center right;
+    background: #fff url('../img/nav_separator.png') no-repeat center right;
     padding-right: 20px;
 }
 nav ul li:last-child {
@@ -377,7 +380,7 @@ header {
     background-color: #333;
     background-size: cover;
     background-position: center center;
-    background-image: url('./images/header/courses/sample.jpg');    
+    background-image: url('../img/header/courses/sample.jpg');    
 }
 header .content {
     position: relative;
@@ -411,7 +414,7 @@ header#home .share {
     height: 500px;
     background-size: cover;
     background-position: center center;
-    background-image: url("./images/carrousel/01.jpg");
+    background-image: url("../img/carrousel/01.jpg");
 }
 .carrousel ul li {
     width: 100%;
@@ -431,17 +434,17 @@ header#home .share {
     z-index: 1;
     -webkit-backface-visibility: hidden;
 }
-.carrousel ul li:nth-child(1) span { background-image: url("./images/carrousel/01.jpg"); }
-.carrousel ul li:nth-child(2) span { background-image: url("./images/carrousel/02.jpg"); }
-.carrousel ul li:nth-child(3) span { background-image: url("./images/carrousel/03.jpg"); }
-.carrousel ul li:nth-child(4) span { background-image: url("./images/carrousel/04.jpg"); }
-.carrousel ul li:nth-child(5) span { background-image: url("./images/carrousel/05.jpg"); }
-.carrousel ul li:nth-child(6) span { background-image: url("./images/carrousel/06.jpg"); }
-.carrousel ul li:nth-child(7) span { background-image: url("./images/carrousel/07.jpg"); }
-.carrousel ul li:nth-child(8) span { background-image: url("./images/carrousel/08.jpg"); }
-.carrousel ul li:nth-child(9) span { background-image: url("./images/carrousel/09.jpg"); }
-.carrousel ul li:nth-child(10) span { background-image: url("./images/carrousel/10.jpg"); }
-.carrousel ul li:nth-child(11) span { background-image: url("./images/carrousel/11.jpg"); }
+.carrousel ul li:nth-child(1) span { background-image: url("../img/carrousel/01.jpg"); }
+.carrousel ul li:nth-child(2) span { background-image: url("../img/carrousel/02.jpg"); }
+.carrousel ul li:nth-child(3) span { background-image: url("../img/carrousel/03.jpg"); }
+.carrousel ul li:nth-child(4) span { background-image: url("../img/carrousel/04.jpg"); }
+.carrousel ul li:nth-child(5) span { background-image: url("../img/carrousel/05.jpg"); }
+.carrousel ul li:nth-child(6) span { background-image: url("../img/carrousel/06.jpg"); }
+.carrousel ul li:nth-child(7) span { background-image: url("../img/carrousel/07.jpg"); }
+.carrousel ul li:nth-child(8) span { background-image: url("../img/carrousel/08.jpg"); }
+.carrousel ul li:nth-child(9) span { background-image: url("../img/carrousel/09.jpg"); }
+.carrousel ul li:nth-child(10) span { background-image: url("../img/carrousel/10.jpg"); }
+.carrousel ul li:nth-child(11) span { background-image: url("../img/carrousel/11.jpg"); }
 
 /* homepage header splash */
 .splash-wrapper {
@@ -467,6 +470,10 @@ header#home .share {
     border-top: 1px solid #ebebeb;
     border-color: rgba(255, 255, 255, 0.7);
     text-align: left;
+}
+.splash-wrapper .latest a {
+    color: #fff;
+    border-bottom: none;
 }
 .splash-wrapper .contact-button { margin: 50px auto 0 auto; }
 .splash-wrapper .splash {
@@ -529,11 +536,11 @@ header .content .share {
 }
 .courses-navigation li a.next {
     padding: 10px 12px 10px 30px;
-    background: url('./images/header/left-arrow.png') no-repeat center left;   
+    background: url('../img/header/left-arrow.png') no-repeat center left;   
 }
 .courses-navigation li a.previous {
     padding: 10px 30px 10px 12px;
-    background: url('./images/header/right-arrow.png') no-repeat center right;   
+    background: url('../img/header/right-arrow.png') no-repeat center right;   
 }
 
 /* courses heading */
@@ -578,20 +585,22 @@ header .content .share {
 .course-heading .pricing:after { clear: both; }
 
 .course-heading .pricing .price {
-   /* position: absolute; 
-    top: 12px;*/
     float: left;
     display: inline-block;
     margin: 12px 0 0 20px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
 }
+.course-heading .pricing .call-to-action .button { padding: 11px 50px; }
 
 /* common pricing */
 .price strong, .date strong {
     font-size: 3.125em;
     font-weight: 700;
 }
-.call-to-action .button { padding: 11px 50px; }
+.call-to-action .button {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
 .availability {
     display: block;
     text-align: center;
@@ -1026,10 +1035,7 @@ footer h2 {
     line-height: 1em;
     text-align: center;    
 }
-footer .two-col .col p {
-        line-height: 1.6;
-
-}
+footer .two-col .col p { line-height: 1.6; }
 footer a {
     color: #44a0cd;
     border-bottom: 1px solid #44a0cd;
@@ -1046,12 +1052,14 @@ footer a {
     font-size: 0.9em;
     border-color: rgba(255, 255, 255, 0.4);
 }
-.end-bar .legal {
-    float: left;
-}
+.end-bar .legal { float: left; }
 .end-bar .contact-us {
     float: left;
     text-align: right;
+}
+.end-bar .contact-us a {
+    color: #fff;
+    border-bottom-color: #fff;
 }
 
 
@@ -1099,7 +1107,7 @@ footer a {
     line-height: 58px;
     font-weight: bold;
     color: #5f5f5f;
-    background-color: #fff;
+    /*background-color: #fff;*/
     padding: 0 5px;
 }
 .custom-select .add-on span {
@@ -1196,3 +1204,21 @@ html[xmlns] .slides {
     color: transparent;
 }
 .flex-control-nav li a.flex-active { background-color: #1abc9c; }
+
+
+/* @10 MEDIA QUERIES */
+
+@media (max-width: 900px) {
+    body { font-size: 1em; }
+    
+    #navbar { height: 70px; }
+    #logo { top: 18px; }
+    #logo img {
+        width: 170px; 
+        margin-bottom: 5px;     
+    }
+    #claim { font-size: 0.7em; }
+    nav ul { top: 23px; }
+    
+    header { margin-top: 70px; }
+}

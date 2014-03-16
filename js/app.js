@@ -110,7 +110,7 @@ $(window).load(function(){
             return false;
         }
         else{
-            $("#contact_form").hide();
+            $(".two-col.contact-form").hide();
             $("#contact").addClass("contacted");
         }
     });
