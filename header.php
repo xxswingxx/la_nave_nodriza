@@ -80,7 +80,7 @@
                         <li><a href="<?php echo $host ?>#la-nave-nodriza" accesskey="2">Qué es</a></li>
                         <li><a href="<?php echo $host ?>#founders" accesskey="3">Quién está detrás</a></li>
                         <li><a href="<?php echo $host ?>#courses" accesskey="4">Qué ofrecemos</a></li>
-                        <li><a href="<?php echo $host ?>#to-whom" accesskey="5">Para quién</a></li>
+                        <li><a href="<?php echo $host ?>#who-is-for" accesskey="5">Para quién</a></li>
                         <li><a href="<?php echo $host ?>#contact" accesskey="6">Contacta</a></li>       
                         <li class="<?php echo (is_home() ? 'active' :  '') ?>">
                             <a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" accesskey="7">Bitácora</a>
