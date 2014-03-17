@@ -869,6 +869,10 @@ textarea { resize: vertical; }
     margin-bottom: 15px;
     position: relative;
 }
+/* hidden input for bots */
+#contact form #mailchimp {
+    display: none;    
+}
 
 /* inline fields */
 #contact form .inline-fields { overflow: hidden; }
