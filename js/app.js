@@ -12,13 +12,6 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
-
-    if (window.location.hash != ""){
-        var scroll = $(window.location.hash).offset().top;
-        scroll = scroll-60;
-        $("html, body").animate({scrollTop:scroll},{duration:500});
-    
-    }
     $( window ).konami({
         cheat: function() {
             window.location.replace('http://www.youtube.com/v/PDHCLjuOzXY&autoplay=1');
