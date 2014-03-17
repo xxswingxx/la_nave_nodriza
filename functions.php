@@ -196,11 +196,13 @@ function get_pages_links_with_titles($pages) {
 }
 
 function get_prev_next() {
-  $ids = get_active();
-  $pagelist = get_active_list();
+  global $wpdb;
+  //$ids = get_active();
+  $querystr = "SELECT $wpdb->posts. * FROM $wpdb->posts WHERE $wpdb->posts.post_status = 'publish' AND $wpdb->posts.post_type = 'page' ORDER BY $wpdb->posts.post_date DESC";
+  $pagelist = $wpdb->get_results($querystr, OBJECT);  //get_active_list();
   $pages = array();
   foreach ($pagelist as $page) {
-    if ($page->post_status == "publish"){
+    if ($page->ID != get_option('page_on_front') && $page->ID != get_option('page_for_posts') ){
       $pages[] += (int)$page->ID;
     }
   }
