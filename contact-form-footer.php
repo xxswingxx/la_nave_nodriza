@@ -49,7 +49,7 @@
                         <form id="contact_form" action="http://recreahq.us7.list-manage1.com/subscribe/post" target="hidden_iframe" method="POST">
                             <input type="hidden" name="u" value="131291bbc9127db4ab11d6955">
                             <input type="hidden" name="id" value="8e7cf2d390">
-                            <div class="field-block mailchimp">
+                            <div class="field-block" id="mailchimp">
                                 <label>Hello friendlybot!</label>
                                 <!-- real people should not fill this in and expect good things -->
                                 <input type="text" name="b_131291bbc9127db4ab11d6955_8e7cf2d390" value="">
