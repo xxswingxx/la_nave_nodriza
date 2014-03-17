@@ -77,6 +77,7 @@
 
         <!-- scripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.appear.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.lockfixed.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.konami.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>

@@ -12,6 +12,23 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
+
+    // Add class on window load
+    $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
+
+    // Sticky box 
+    $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
+
+    // Initialize appear plugin
+    $('#home, #la-nave-nodriza, #founders, #courses, #who-is-for, #contact').appear();
+
+    $('#home, #la-nave-nodriza, #founders, #courses, #who-is-for, #contact').on('appear', function(event, $all_appeared_elements) {
+      var offset = $all_appeared_elements.length > 1 ? 2 : 1;
+      var id = $($all_appeared_elements[$all_appeared_elements.length - offset]).attr('id');
+      $("nav").find('.active').removeClass('active');
+      $('nav').find('a[href='+'#'+id+']').parent().addClass('active');
+    });
+
     $( window ).konami({
         cheat: function() {
             window.location.replace('http://www.youtube.com/v/PDHCLjuOzXY&autoplay=1');
@@ -23,6 +40,7 @@ $(window).load(function(){
         $('nav a[href=#contact]').click();
     })
 
+    // open rel external into new window
     $('a[rel^="external"]').click( function() {
         window.open( $(this).attr('href') );
         return false;
@@ -32,10 +50,6 @@ $(window).load(function(){
         window.open( $(this).attr('href') );
         return false;
     });
-
-    $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
-
-    $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
     
     $(document).on('click', function(){
         if ($(".dropdown-menu").is(':visible')) {
@@ -52,11 +66,9 @@ $(window).load(function(){
         $("nav").find('.active').removeClass('active');
     });
 
-    $("nav a[href^=#], #logo a").click(function(){
+    $("nav a[href^=#], #logo a").click(function(e){
+        e.stopImmediatePropagation()
         $("nav").find('.active').removeClass('active');
-        if ($(this).parent().attr('id') != 'logo'){
-            $(this).parent().addClass('active');
-        }
         var link = $(this).attr("href");
         var scroll = $(link).offset().top;
             scroll = scroll-60;
