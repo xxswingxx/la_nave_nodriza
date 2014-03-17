@@ -20,6 +20,8 @@
 <!--<![endif]-->
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
+        <?php $title = is_front_page() ? 'La nave nodriza' : get_the_title($post->ID); ?>
+        <title><?php echo $title ?></title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -32,11 +34,32 @@
         <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
         <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">      
         
-        <!-- style -->
+        <!-- metadata    
+        <meta itemprop="name" content="Taller de narrativa en proyectos digitales - Lanavenodriza.com">
+        <meta itemprop="description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
+        <meta itemprop="image" content="http://www.lanavenodriza.com/img/logo.png">
+        
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@Nodrizismo">
+        <meta name="twitter:creator" content="@Nodrizismo">
+        <meta name="twitter:title" content="Taller de narrativa en proyectos digitales - Lanavenodriza.com">
+        <meta name="twitter:description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
+        <meta name="twitter:image:src" content="http://www.lanavenodriza.com/img/logo.png"
+        
+        <meta property="og:type" content="article">
+        <meta property="og:title" content="Taller de narrativa en proyectos digitales - Lanavenodriza.com">
+        <meta property="og:url" content="http://www.lanavenodriza.com/">
+        <meta property="og:description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
+        <meta property="og:image" content="http://www.lanavenodriza.com/img/logo.png">
+        <meta property="og:site_name" content="La Nave Nodriza - Todos tenemos algo que aprender">
+         /metadata -->
+
+        <!-- styles -->
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
         <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
         <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=Vollkorn:400" rel="stylesheet" type="text/css">
+        <!-- styles -->
 
         <!-- scripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
@@ -48,6 +71,7 @@
                 data-message="Para darte un servicio más personalizado, usamos cookies propias y de terceros. Si sigues navegando, entendemos que aceptas su uso."
                 data-linkmsg="Más información.">
         </script>
+
         <!--[if lt IE 9]>
         <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
         <![endif]-->
