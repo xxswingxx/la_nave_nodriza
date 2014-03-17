@@ -20,8 +20,20 @@
 <!--<![endif]-->
     <head>
         <meta charset="<?php bloginfo( 'charset' ); ?>" />
-        <?php $title = is_front_page() ? 'La nave nodriza' : get_the_title($post->ID); ?>
-        <title><?php echo $title ?></title>
+        <?php 
+            $meta = array();
+            if (is_front_page()){
+                $meta['title'] = 'La nave nodriza';
+                $meta['subtitle'] = "Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender";
+                $meta['img'] = get_template_directory_uri() . "/images/logo.png";
+            } else {
+                $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full' );
+                $meta = get_page_metadata($post->ID);
+                $meta['title'] = get_the_title($post->ID) . " - Lanavenodriza.com"; 
+                $meta['img'] = $thumbnail[0];
+            }
+        ?>
+        <title><?php echo $meta['title'] ?></title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -34,25 +46,25 @@
         <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114">
         <link href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144">      
         
-        <!-- metadata    
-        <meta itemprop="name" content="Taller de narrativa en proyectos digitales - Lanavenodriza.com">
-        <meta itemprop="description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
-        <meta itemprop="image" content="http://www.lanavenodriza.com/img/logo.png">
+        <!-- metadata -->
+        <meta itemprop="name" content="<?php echo $meta['title']; ?>">
+        <meta itemprop="description" content="<?php echo $meta['subtitle']; ?>">
+        <meta itemprop="image" content="<?php echo $meta['img']; ?>">
         
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:site" content="@Nodrizismo">
         <meta name="twitter:creator" content="@Nodrizismo">
-        <meta name="twitter:title" content="Taller de narrativa en proyectos digitales - Lanavenodriza.com">
-        <meta name="twitter:description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
-        <meta name="twitter:image:src" content="http://www.lanavenodriza.com/img/logo.png"
+        <meta name="twitter:title" content="<?php echo $meta['title']; ?>">
+        <meta name="twitter:description" content="<?php echo $meta['subtitle']; ?>">
+        <meta name="twitter:image:src" content="<?php echo $meta['img']; ?>">
         
         <meta property="og:type" content="article">
-        <meta property="og:title" content="Taller de narrativa en proyectos digitales - Lanavenodriza.com">
-        <meta property="og:url" content="http://www.lanavenodriza.com/">
-        <meta property="og:description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
-        <meta property="og:image" content="http://www.lanavenodriza.com/img/logo.png">
+        <meta property="og:title" content="<?php echo $meta['title']; ?>">
+        <meta property="og:url" content="<?php echo get_permalink($post->ID); ?>">
+        <meta property="og:description" content="<?php echo $meta['subtitle']; ?>">
+        <meta property="og:image" content="<?php echo $meta['img']; ?>">
         <meta property="og:site_name" content="La Nave Nodriza - Todos tenemos algo que aprender">
-         /metadata -->
+         <!-- /metadata -->
 
         <!-- styles -->
         <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
