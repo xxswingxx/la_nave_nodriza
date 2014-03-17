@@ -29,6 +29,7 @@
             } else {
                 $thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full' );
                 $meta = get_page_metadata($post->ID);
+                $meta['subtitle'] = substr($meta['subtitle'],0,193) . '...';
                 $meta['title'] = get_the_title($post->ID) . " - Lanavenodriza.com"; 
                 $meta['img'] = $thumbnail[0];
             }
@@ -56,6 +57,7 @@
         <meta name="twitter:creator" content="@Nodrizismo">
         <meta name="twitter:title" content="<?php echo $meta['title']; ?>">
         <meta name="twitter:description" content="<?php echo $meta['subtitle']; ?>">
+        <meta name="twitter:url" content="<?php echo get_permalink($post->ID); ?>">
         <meta name="twitter:image:src" content="<?php echo $meta['img']; ?>">
         
         <meta property="og:type" content="article">

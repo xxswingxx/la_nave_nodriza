@@ -66,7 +66,7 @@
 	                <div class="pricing">
 	                    <div class="call-to-action">
 	                    	<?php $call_to_action = isset($metadata['call_to_action']) ? $metadata['call_to_action'] : '#' ?>
-							<?php if (isset($metadata['price'])) { ?>
+							<?php if (isset($metadata['remaining'])) { ?>
 							    <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
 							<?php } else { ?> 
 							    <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza</a> 

@@ -259,6 +259,7 @@ p:last-child { padding-bottom: 0; }
     width: 32%;
     padding-right: 60px;
 }
+
 .left-sidebar .col h2 { text-transform: uppercase; }
 .left-sidebar .col:first-child h2 { font-weight: normal; }
 .left-sidebar .col:last-child h2 { padding-top: 15px; }
@@ -340,7 +341,7 @@ nav ul {
 }
 nav ul li {
     display: inline-block;
-    background: #fff url('./images/nav_separator.png') no-repeat center right;
+    background: #fff url('./images//nav_separator.png') no-repeat center right;
     padding-right: 20px;
 }
 nav ul li:last-child {
@@ -370,7 +371,7 @@ header {
     background-color: #333;
     background-size: cover;
     background-position: center center;
-    background-image: url('./images/header/courses/sample.jpg');
+    background-image: url('./images//header/courses/sample.jpg');
 }
 header .content {
     position: relative;
@@ -404,7 +405,7 @@ header#home .share {
     height: 500px;
     background-size: cover;
     background-position: center center;
-    background-image: url("./images/carrousel/01.jpg");
+    background-image: url("./images//carrousel/01.jpg");
 }
 .carrousel ul li {
     width: 100%;
@@ -424,17 +425,17 @@ header#home .share {
     z-index: 1;
     -webkit-backface-visibility: hidden;
 }
-.carrousel ul li:nth-child(1) span { background-image: url("./images/carrousel/01.jpg"); }
-.carrousel ul li:nth-child(2) span { background-image: url("./images/carrousel/02.jpg"); }
-.carrousel ul li:nth-child(3) span { background-image: url("./images/carrousel/03.jpg"); }
-.carrousel ul li:nth-child(4) span { background-image: url("./images/carrousel/04.jpg"); }
-.carrousel ul li:nth-child(5) span { background-image: url("./images/carrousel/05.jpg"); }
-.carrousel ul li:nth-child(6) span { background-image: url("./images/carrousel/06.jpg"); }
-.carrousel ul li:nth-child(7) span { background-image: url("./images/carrousel/07.jpg"); }
-.carrousel ul li:nth-child(8) span { background-image: url("./images/carrousel/08.jpg"); }
-.carrousel ul li:nth-child(9) span { background-image: url("./images/carrousel/09.jpg"); }
-.carrousel ul li:nth-child(10) span { background-image: url("./images/carrousel/10.jpg"); }
-.carrousel ul li:nth-child(11) span { background-image: url("./images/carrousel/11.jpg"); }
+.carrousel ul li:nth-child(1) span { background-image: url("./images//carrousel/01.jpg"); }
+.carrousel ul li:nth-child(2) span { background-image: url("./images//carrousel/02.jpg"); }
+.carrousel ul li:nth-child(3) span { background-image: url("./images//carrousel/03.jpg"); }
+.carrousel ul li:nth-child(4) span { background-image: url("./images//carrousel/04.jpg"); }
+.carrousel ul li:nth-child(5) span { background-image: url("./images//carrousel/05.jpg"); }
+.carrousel ul li:nth-child(6) span { background-image: url("./images//carrousel/06.jpg"); }
+.carrousel ul li:nth-child(7) span { background-image: url("./images//carrousel/07.jpg"); }
+.carrousel ul li:nth-child(8) span { background-image: url("./images//carrousel/08.jpg"); }
+.carrousel ul li:nth-child(9) span { background-image: url("./images//carrousel/09.jpg"); }
+.carrousel ul li:nth-child(10) span { background-image: url("./images//carrousel/10.jpg"); }
+.carrousel ul li:nth-child(11) span { background-image: url("./images//carrousel/11.jpg"); }
 
 /* homepage header splash */
 .splash-wrapper {
@@ -523,11 +524,11 @@ header .content .share {
 }
 .courses-navigation li a.next {
     padding: 10px 12px 10px 30px;
-    background: url('./images/header/left-arrow.png') no-repeat center left;   
+    background: url('./images//header/left-arrow.png') no-repeat center left;   
 }
 .courses-navigation li a.previous {
     padding: 10px 30px 10px 12px;
-    background: url('./images/header/right-arrow.png') no-repeat center right;   
+    background: url('./images//header/right-arrow.png') no-repeat center right;   
 }
 
 /* courses heading */
@@ -796,6 +797,67 @@ p strong { font-weight: bold; }
     border-bottom-color: #fff;
 }
 
+/* course planning */
+.planning {
+    margin: 20px 0 80px;
+    background: url('./images//dotted_line.png') repeat-y 191px center transparent;
+}
+.planning h3, .planning h4  {
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-size: 1em;
+    line-height: 1.3em;
+}
+.planning h3 { font-weight: bold; }
+.planning .week {
+    width: 160px;
+    display: inline-block;
+    vertical-align: top;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    padding-bottom: 40px;
+    position: relative;
+    margin-right: 60px;
+}
+.bullet {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #de6726;
+    border-radius: 50%;    
+}
+.planning .week .bullet {
+    position: absolute;
+    top: 3px;
+    right: -39px;
+}
+.planning .week-plan {
+    width: 51%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.3em;
+    -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+    padding-bottom: 40px;
+}
+.planning .planning-end {
+    position: relative;    
+}
+.planning .planning-end .bullet {
+    position: absolute;
+    top: 0;
+    left: 184px;
+}
+.planning .planning-end strong {
+    position: absolute;
+    top: 25px;
+    left: 177px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
 /* more courses */
 .more { padding: 45px 0 60px; }
 .more h2 {
@@ -870,9 +932,7 @@ textarea { resize: vertical; }
     position: relative;
 }
 /* hidden input for bots */
-#contact form #mailchimp {
-    display: none;    
-}
+#contact form #mailchimp { display: none; }
 
 /* inline fields */
 #contact form .inline-fields { overflow: hidden; }
@@ -1013,11 +1073,8 @@ footer a {
 
 /* sticky menu */
 
-/*
 .left-sidebar .sticky-parent { position: relative; }
 .left-sidebar .sticky-parent .sticky-box { position: absolute; }
-*/
-
 
 /* custom select */
 
@@ -1154,7 +1211,7 @@ html[xmlns] .slides {
 
 @media screen and (max-width: 809px) {
 
-    body { font-size: 0.9em; }
+    body { font-size: 1em; }
     
     #navbar { height: 95px; }
     #logo {
