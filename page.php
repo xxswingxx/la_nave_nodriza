@@ -62,14 +62,18 @@
 	            <!-- course heading -->
 	            <div class="course-heading">
 	                <h1><?php the_title(); ?></h1>
-	                <h2><?php echo $metadata['subtitle']; ?></h2>
+	                <h2><?php echo (isset($metadata['subtitle']) ? $metadata['subtitle'] : '' ); ?></h2>
 	                <div class="pricing">
 	                    <div class="call-to-action">
 	                    	<?php $call_to_action = isset($metadata['call_to_action']) ? $metadata['call_to_action'] : '#' ?>
-	                        <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
-	                    </div>
+							<?php if (isset($metadata['price'])) { ?>
+							    <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
+							<?php } else { ?> 
+							    <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza</a> 
+							<?php } ?>
+						</div>
 	                    <div class="price">
-	                        <strong><?php echo $metadata['price']; ?></strong>€
+	                        <strong><?php echo (isset($metadata['price']) ? $metadata['price'] : '' ); ?></strong>€
 	                    </div>
 	                </div>
 	            </div>                          
@@ -83,7 +87,7 @@
 				$content = split_content();
 				echo $content[0];
 				get_template_part('sticky-sidebar');
-				echo $content[1];
+				echo (isset($content[1]) ? $content[1] : '');
 			?>
 			<!-- /content -->
 			<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>

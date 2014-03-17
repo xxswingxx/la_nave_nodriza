@@ -4,21 +4,25 @@
         <div class="course-price">            
             <h2>Precio</h2>
             <ul class="price">
-                <li><strong><?php echo $metadata['price']; ?></strong>€</li>
-                <?php echo $metadata['discounts']; ?>
+                <li><strong><?php echo (isset($metadata['price']) ? $metadata['price'] : '' ); ?></strong>€</li>
+                <?php echo (isset($metadata['discounts']) ? $metadata['discounts'] : '' ); ?>
             </ul>
         </div>
 
         <div class="course-date">                      
             <h2>Fechas</h2>
             <ul class="date">
-                <?php echo $metadata['dates']; ?>                                               
+                <?php echo (isset($metadata['date']) ? $metadata['date'] : '' ); ?>
             </ul>
         </div>
 
         <div class="call-to-action">
             <?php $call_to_action = isset($metadata['call_to_action']) ? $metadata['call_to_action'] : '#' ?>
-            <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
+            <?php if (isset($metadata['price'])) { ?>
+                <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza <span class="availability">- <?php echo $metadata['remaining']; ?> -</span></a>
+            <?php } else { ?> 
+                <a href="<?php echo $call_to_action ?>" class="button">Reservar plaza</a> 
+            <?php } ?>
         </div>
 
         <div class="notes">

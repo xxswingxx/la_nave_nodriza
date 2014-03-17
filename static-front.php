@@ -167,7 +167,7 @@
                                 </a>
                             </div> 
                             <h2><? echo $pages_links[$i]; ?></h2>
-                            <h3><? echo $metadata['extra'] ?></h3>
+                            <h3><?php echo (isset($metadata['extra']) ? $metadata['extra'] : '' ); ?></h3>
                         </div>
                     <? } ?>
                 </div>

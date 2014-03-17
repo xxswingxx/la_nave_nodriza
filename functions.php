@@ -164,7 +164,7 @@ function get_thumbnail($id) {
 
 function get_active() {
   global $wpdb;
-  $query_result = $wpdb->get_results("SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'lnn_page_active' AND meta_value = '1'");
+  $query_result = $wpdb->get_results("SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'lnn_page_active' AND meta_value is not null");
   $ids =  array();
 
   $length = count($query_result);
@@ -200,7 +200,9 @@ function get_prev_next() {
   $pagelist = get_active_list();
   $pages = array();
   foreach ($pagelist as $page) {
-     $pages[] += (int)$page->ID;
+    if ($page->post_status == "publish"){
+      $pages[] += (int)$page->ID;
+    }
   }
   $current = array_search(get_the_ID(), $pages);
   $prevID = null;
