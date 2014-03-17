@@ -164,7 +164,7 @@ function get_thumbnail($id) {
 
 function get_active() {
   global $wpdb;
-  $query_result = $wpdb->get_results("SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'lnn_page_active' AND meta_value is not null");
+  $query_result = $wpdb->get_results("SELECT post_id FROM $wpdb->postmeta WHERE meta_key = 'lnn_page_active'");
   $ids =  array();
 
   $length = count($query_result);
