@@ -12,11 +12,14 @@ $(document).ready(function() {
 });
 
 $(window).load(function(){
+    $('#cookiebanner-fake').click(function(){
+        $('#cookiebanner-real').click();
+    })
     // Add class on window load
     $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
 
     // Sticky box 
-    $.lockfixed('.sticky-parent', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
+    $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
 
     // Initialize appear plugin
     $('#home, #la-nave-nodriza, #founders, #courses, #who-is-for, #contact').appear();

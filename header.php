@@ -37,7 +37,6 @@
         <title><?php echo $meta['title'] ?></title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="description" content="Lanavenodriza.com surge con la vocación de crear nuevas experiencias formativas en el campo del diseño, formas diferentes de aprender">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
         <link rel="author" type="text/plain" href="humans.txt">
 
         <!-- favicon -->        
@@ -78,8 +77,7 @@
         <!-- scripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.appear.js"></script>
-        
-        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.stickIt.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.stickit.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.lockfixed.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.konami.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>

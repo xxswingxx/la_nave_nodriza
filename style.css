@@ -1072,12 +1072,10 @@ footer a {
 
 
 /* sticky menu */
-
 .left-sidebar .sticky-parent { position: relative; }
 .left-sidebar .sticky-parent .sticky-box { position: absolute; }
 
 /* custom select */
-
 .custom-select.btn-group {
     float: none;
     position: relative;
@@ -1140,6 +1138,7 @@ footer a {
     background-color: #eee;
 }
 
+/* dropdown */
 .dropdown-menu {
     position: absolute;
     border-radius: 3px;
@@ -1164,14 +1163,11 @@ footer a {
 
 
 /* flexslider carousel */
-
 .flexslider .slides > li {
     display: none;
     -webkit-backface-visibility: hidden;
 }
-
 .flex-pauseplay span { text-transform: capitalize; }
-
 .slides:after {
     content: ".";
     display: block;
@@ -1180,15 +1176,9 @@ footer a {
     line-height: 0;
     height: 0;
 }
-
-html[xmlns] .slides {
-  display: block;
-}
-
+html[xmlns] .slides { display: block; }
 * html .slides { height: 1%; }
-
 .no-js .slides > li:first-child { display: block; }
-
 .flex-control-nav { text-align: center; }
 .flex-control-nav li {
     display: inline-block;
@@ -1205,6 +1195,38 @@ html[xmlns] .slides {
     color: transparent;
 }
 .flex-control-nav li a.flex-active { background-color: #1abc9c; }
+
+/* cookie banner */
+.cookiebanner {
+    min-height: 30px !important;
+    line-height: 30px !important;
+    background-color: #464646 !important;
+    color: #ddd !important;
+}
+.cookiebanner span {
+    font-family: "Lato", "Helvetica Neue", sans-serif !important;
+    font-size: 13px;     
+}
+.cookiebanner .button {
+    margin: 0px 20px !important;
+    line-height: 20px !important;
+    border: 1px solid #fff !important;
+    color: #fff;
+    font-family: "Lato", "Helvetica Neue", sans-serif !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+    padding: 4px 12px !important;
+    border-radius: 4px !important;
+    background-color: #1abc9c !important;
+    text-shadow: 1px 1px 0 #149077 !important;
+    cursor: pointer;    
+}
+.cookiebanner a {
+    color: #ddd !important;
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
+.cookiebanner a:hover { text-decoration: underline !important; }
 
 
 /* @10 MEDIA QUERIES */
