@@ -83,7 +83,7 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
         <script type="text/javascript" id="cookiebanner" src="<?php echo get_template_directory_uri(); ?>/js/cookiebanner.js"
-                data-message="Para darte un servicio más personalizado, usamos cookies propias y de terceros. Si sigues navegando, entendemos que aceptas su uso."
+                data-message="Las cookies nos permiten ofrecer nuestros servicios y mejorar su experiencia en Internet. Al utilizar nuestros servicios, aceptas el uso que hacemos de las cookies."
                 data-linkmsg="Más información.">
         </script>
 
