@@ -58,8 +58,8 @@
                             <div class="field-block inline-fields">
                                 <label>¿Cómo te llamas?</label>
                                 <input type="text" name="MERGE1" id="first_name" aria-required="true" placeholder="Nombre">
-                                <input type="text" name="MERGE2" id="last_name" aria-required="true" placeholder="Apellidos">
-                                <small class="error">Campo necesario</small>
+                                <input type="text" name="MERGE2" id="last_name" placeholder="Apellidos">
+                                <small class="error">Campo obligatorio</small>
                             </div>
                             <div class="field-block inline-fields">
                                 <label for="email">Déjanos al menos tu email para que podamos contactar contigo</label>
@@ -101,7 +101,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <small class="error top">Campo necesario</small>
+                                <small class="error top">Campo obligatorio</small>
                             </div>    
                             <div class="field-block">
                                 <label>Quién eres, a qué te dedicas... Dedícanos unas palabras</label>
