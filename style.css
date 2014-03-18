@@ -1209,9 +1209,9 @@ html[xmlns] .slides {
 
 /* @10 MEDIA QUERIES */
 
-@media screen and (max-width: 809px) {
+@media screen and (max-width: 767px) {
 
-    body { font-size: 1em; }
+    body { font-size: 0.9em; }
     
     #navbar { height: 95px; }
     #logo {
@@ -1242,7 +1242,7 @@ html[xmlns] .slides {
     .courses-navigation li a.previous { padding: 6px 30px 6px 12px; }
 }
 
-@media screen and (min-width: 810px) and (max-width: 900px) {
+@media screen and (min-width: 768px) and (max-width: 900px) {
     body { font-size: 1em; }
     
     #navbar { height: 70px; }
@@ -1253,6 +1253,7 @@ html[xmlns] .slides {
     }
     #claim { font-size: 0.7em; }
     nav ul { top: 23px; }
+    nav ul li { font-size: 0.9em; }
     
     header { margin-top: 70px; }
 }
