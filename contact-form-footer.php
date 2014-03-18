@@ -46,29 +46,30 @@
                     
                     <!-- contact form --> 
                     <div class="col">
-                        <form id="contact_form" action="http://recreahq.us7.list-manage1.com/subscribe/post" target="hidden_iframe" method="POST">
-                            <input type="hidden" name="u" value="131291bbc9127db4ab11d6955">
-                            <input type="hidden" name="id" value="8e7cf2d390">
+                        <form id="contact_form" action="http://lanavenodriza.us7.list-manage.com/subscribe/post" target="hidden_iframe" method="POST">
+                            <input type="hidden" name="u" value="8dfad4817d60eb0bab9c73582">
+                            <input type="hidden" name="id" value="034d784be3">
                             <div class="field-block" id="mailchimp">
                                 <label>Hello friendlybot!</label>
                                 <!-- real people should not fill this in and expect good things -->
-                                <input type="text" name="b_131291bbc9127db4ab11d6955_8e7cf2d390" value="">
+                                <input type="text" name="b_8dfad4817d60eb0bab9c73582_034d784be3" value="">
                             </div>
                             <legend class="hidden">Envíanos un mensaje</legend>
-                            <div class="field-block">
+                            <div class="field-block inline-fields">
                                 <label>¿Cómo te llamas?</label>
-                                <input type="text" name="MERGE1" id="entry_1889934454" aria-required="true">
+                                <input type="text" name="MERGE1" id="first_name" aria-required="true" placeholder="Nombre">
+                                <input type="text" name="MERGE2" id="last_name" aria-required="true" placeholder="Apellidos">
                                 <small class="error">Campo necesario</small>
                             </div>
                             <div class="field-block inline-fields">
                                 <label for="email">Déjanos al menos tu email para que podamos contactar contigo</label>
                                 <input id="email" name="MERGE0" type="email" placeholder="Un email"  aria-required="true">
-                                <input id="tel" name="MERGE3" type="tel" placeholder="Un teléfono">
+                                <input id="tel" name="MERGE9" type="tel" placeholder="Un teléfono">
                                 <small class="error">Campo obligatorio</small>
                             </div>
                             <div class="field-block">
                                 <label for="interested">Estás interesado en…</label>
-                                <input type="text" name="MERGE5" id="entry_2018499662" aria-required="true" style="display:none">
+                                <input type="text" name="MERGE10" id="interested_in" aria-required="true" style="display:none">
 
                                 <div class="btn-group custom-select undefined open">
                                     <div class="dropdown-toggle" data-toggle="dropdown">
@@ -104,7 +105,7 @@
                             </div>    
                             <div class="field-block">
                                 <label>Quién eres, a qué te dedicas... Dedícanos unas palabras</label>
-                                <textarea name="MERGE4" id="entry_1111417980" aria-required="true"></textarea>
+                                <textarea name="MERGE4" id="about_you" aria-required="true"></textarea>
                                 <small class="error">Campo obligatorio</small>
                             </div>
                             <input type="submit" name="submit" value="Toc Toc">

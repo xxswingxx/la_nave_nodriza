@@ -106,7 +106,7 @@
         <![endif]-->
 
         <!-- navigation bar -->
-        <div id="navbar">
+        <div id="navbar" style="z-index:255">
             <div class="content">
                 <!-- logo -->
                 <div id="logo">

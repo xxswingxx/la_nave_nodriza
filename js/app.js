@@ -19,7 +19,9 @@ $(window).load(function(){
     $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
 
     // Sticky box 
-    $.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
+    $('.sticky-parent').stickit({scope: StickScope.Parent, top: 90, extraHeight: $(".highlighted-blue.two-col.left-sidebar .col").not('.sticky-parent').height() - 500 });
+
+    //$.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
 
     // Initialize appear plugin
     $('#home, #la-nave-nodriza, #founders, #courses, #who-is-for, #contact').appear();
@@ -103,27 +105,27 @@ $(window).load(function(){
         $(".notshow").removeClass("notshow");
         $(this).find('a').addClass("notshow");
         $(".dropdown-toggle .filter-option.pull-left").html($(this).find('a span').html());
-        $('#entry_2018499662').val($(this).find('a span').html());
+        $('#interested_in').val($(this).find('a span').html());
         return $(".dropdown-menu").toggle();
     });
 
     $("#contact_form").submit(function(event) {
         var error = false;
         $(".error").hide();
-        if($("#entry_1889934454").val() == ""){  //name
-            $("#entry_1889934454").parent().find(".error").css("display", "inline-block");
+        if($("#first_name").val() == ""){  //name
+            $("#first_name").parent().find(".error").css("display", "inline-block");
             error = true;
         }
         if($("#email").val() == ""){ //email
             $("#email").parent().find(".error").css("display", "inline-block");
             error = true;
         }
-        if($("#entry_1111417980").val() == ""){ //about_you
-            $("#entry_1111417980").parent().find(".error").css("display", "inline-block");
+        if($("#about_you").val() == ""){ //about_you
+            $("#about_you").parent().find(".error").css("display", "inline-block");
             error = true;
         }
-        if($("#entry_2018499662").val() == ""){ //interests
-            $("#entry_2018499662").parent().find(".error").css("display", "inline-block");
+        if($("#interested_in").val() == ""){ //interests
+            $("#interested_in").parent().find(".error").css("display", "inline-block");
             error = true;
         }
         if(error){
