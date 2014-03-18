@@ -107,8 +107,6 @@
                                 <textarea name="MERGE4" id="entry_1111417980" aria-required="true"></textarea>
                                 <small class="error">Campo obligatorio</small>
                             </div>
-                            <!-- real people should not fill this in and expect good things -->
-                            <input type="text" name="b_131291bbc9127db4ab11d6955_8e7cf2d390" value="">
                             <input type="submit" name="submit" value="Toc Toc">
                         </form>
                         <iframe name="hidden_iframe" id="hidden_iframe" style="display:none"></iframe>
