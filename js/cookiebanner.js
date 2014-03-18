@@ -347,11 +347,11 @@
             el.style.left = 0;
             el.style.right = 0;
             el.style.height = this.options.height;
-            el.style.minHeight = this.options['min-height'];
+            el.style.minHeight = '30px';
             el.style.zIndex = zidx;
             el.style.background = this.options.bg;
             el.style.color = this.options.fg;
-            el.style.lineHeight = el.style.minHeight;
+            el.style.lineHeight = '30px';
 
             el.style.padding = '5px 16px';
             // TODO: allow typography customizations via data-attribs?

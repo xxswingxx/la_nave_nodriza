@@ -84,7 +84,9 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
         <script type="text/javascript" id="cookiebanner" src="<?php echo get_template_directory_uri(); ?>/js/cookiebanner.js"
                 data-message="Las cookies nos permiten ofrecer nuestros servicios y mejorar su experiencia en Internet. Al utilizar nuestros servicios, aceptas el uso que hacemos de las cookies."
-                data-linkmsg="Más información.">
+                data-linkmsg="Más información."
+                data-bg="#464646"
+                data-fg="#ddd">
         </script>
 
         <!--[if lt IE 9]>

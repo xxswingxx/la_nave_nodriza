@@ -1198,33 +1198,33 @@ html[xmlns] .slides { display: block; }
 
 /* cookie banner */
 .cookiebanner {
-    min-height: 30px !important;
-    line-height: 30px !important;
-    background-color: #464646 !important;
-    color: #ddd !important;
+    min-height: 30px;
+    line-height: 30px;
+    background-color: #464646;
+    color: #ddd;
 }
 .cookiebanner span {
-    font-family: "Lato", "Helvetica Neue", sans-serif !important;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
     font-size: 13px;     
 }
 .cookiebanner .button {
-    margin: 0px 20px !important;
-    line-height: 20px !important;
-    border: 1px solid #fff !important;
+    margin: 0px 20px ;
+    line-height: 20px ;
+    border: 1px solid #fff;
     color: #fff;
-    font-family: "Lato", "Helvetica Neue", sans-serif !important;
-    font-size: 13px !important;
-    font-weight: bold !important;
-    padding: 4px 12px !important;
-    border-radius: 4px !important;
-    background-color: #1abc9c !important;
-    text-shadow: 1px 1px 0 #149077 !important;
+    font-family: "Lato", "Helvetica Neue", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: #1abc9c;
+    text-shadow: 1px 1px 0 #149077;
     cursor: pointer;    
 }
 .cookiebanner a {
-    color: #ddd !important;
-    border-bottom: none !important;
-    text-decoration: none !important;
+    color: #ddd;
+    border-bottom: none;
+    text-decoration: none;
 }
 .cookiebanner a:hover { text-decoration: underline !important; }
 
