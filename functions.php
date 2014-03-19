@@ -208,13 +208,25 @@ function get_prev_next() {
   }
   $current = array_search(get_the_ID(), $pages);
   $prevID = null;
-  if (isset($pages[$current-1])){
-    $prevID = (int)$pages[$current-1];
-  }
   $nextID = null;
-  if (isset($pages[$current+1])) {
-    $nextID = (int)$pages[$current+1];
+  $length = count($pages);
+
+  if ( $length > 1){
+    if (isset($pages[$current-1])){
+      $prevID = (int)$pages[$current-1];
+    }
+    else{
+      $prevID = isset($pages[$length]);
+    }
+
+    if (isset($pages[$current+1])) {
+      $nextID = (int)$pages[$current+1];
+    }
+    else{
+      $nextID = (int)$pages[0];
+    }
   }
+
   return array('prev' =>  $prevID, 'next' => $nextID);
 }
 
