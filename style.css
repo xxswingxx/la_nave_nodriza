@@ -456,27 +456,44 @@ header#home .share {
     line-height: 1.15em;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
-.splash-wrapper .latest {
-    display: inline-block;
-    border-top: 1px solid #ebebeb;
-    border-color: rgba(255, 255, 255, 0.7);
-    text-align: left;
-}
-.splash-wrapper .latest a {
-    color: #fff;
-    border-bottom: none;
-}
+
 .splash-wrapper .contact-button { margin: 50px auto 0 auto; }
 .splash-wrapper .splash {
     margin: 0 auto;
     width: 100%;
     max-width: 880px;
 }
+.splash-wrapper .latest {
+    display: inline-block;
+    border-top: 1px solid #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    text-align: left;
+}
+.splash-wrapper .latest a {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    color: #fff;
+    border-bottom: none;
+}
+.splash-wrapper .latest a:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    width: 100%;
+    -webkit-transition: height 0.2s ease 0s;
+            transition: height 0.2s ease 0s;
+    background-color: #fff;
+    height: 1px;
+}
+.splash-wrapper .latest a:hover:after { height: 3px; }
 .splash-wrapper h2 {
-    padding: 30px 25px 25px 25px;
+    padding: 25px;
     text-align: center;
-    border-bottom: 1px solid #ebebeb;
-    border-color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid #fff;
+    border-color: rgba(255, 255, 255, 0.4);
+    line-height: 1.3;
 }
 .splash-wrapper h2 em {
     position: relative;
@@ -486,7 +503,7 @@ header#home .share {
     text-transform: uppercase;
     background-color: #e46323;
     vertical-align: top;
-    top: 7px;
+    top: 12px;
     font-size: 0.4em;    
     font-family: "Lato", "Helvetica Neue", sans-serif;
     font-style: normal;
@@ -509,25 +526,28 @@ header .content .share {
     display: inline-block;
     margin-right: 10px;
 }
-.courses-navigation li:last-child {
-    margin-right: 0;
-}
+.courses-navigation li:last-child { margin-right: 0; }
 .courses-navigation li a {
+    padding: 10px 12px;
     color: #fff;
     border: 1px solid #fff;
-    border-radius: 3px;    
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);    
 }
 .courses-navigation li a:active {
     position: relative;
     left: 1px;
     top: 1px;
 }
-.courses-navigation li a.next {
-    padding: 10px 12px 10px 30px;
-    background: url('./images/header/left-arrow.png') no-repeat center left;   
+.courses-navigation li a.next { padding: 10px 15px 10px 0; }
+.courses-navigation li a.next span {
+    padding-left: 30px;  
+    background: url('./images/header/left-arrow.png') no-repeat center left;
 }
-.courses-navigation li a.previous {
-    padding: 10px 30px 10px 12px;
+.courses-navigation li a.previous { padding: 10px 0px 10px 15px; }
+.courses-navigation li a.previous span {
+    padding-right: 30px; 
     background: url('./images/header/right-arrow.png') no-repeat center right;   
 }
 
@@ -538,7 +558,7 @@ header .content .share {
     width: 460px;
     padding: 28px 20px 23px;
     color: #fff;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 .course-heading h1 {
     text-align: left;
@@ -576,7 +596,7 @@ header .content .share {
     float: left;
     display: inline-block;
     margin: 12px 0 0 20px;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .course-heading .pricing .call-to-action .button { padding: 11px 50px; }
 
@@ -688,9 +708,14 @@ header .content .share {
 }
 #courses h2 {
     font-size: 1.25em;
-    line-height: 1.2em;
+    line-height: 1.4em;
+    margin-bottom: 5px;
 }
-#courses h2 a { border-bottom: none; }
+#courses h2 a {
+    border-bottom: none;
+    text-decoration: underline;
+}
+
 #courses h3 {
     font: 0.75em "Lato", "Helvetica Neue", sans-serif;
     line-height: 1.9em;
@@ -941,7 +966,7 @@ textarea { resize: vertical; }
     float: left;
     margin-right: 2%;
 }
-#contact form .inline-fields input[type="tel"] { margin: 0 0 0 2%; }
+#contact form .inline-fields #last_name, #contact form .inline-fields input[type="tel"] { margin: 0 0 0 2%; }
 
 /* field-error message */
 #contact form .error {
@@ -1208,8 +1233,8 @@ html[xmlns] .slides { display: block; }
     font-size: 13px;     
 }
 .cookiebanner .button {
-    margin: 0px 20px ;
-    line-height: 20px ;
+    margin: 0px 20px;
+    line-height: 20px;
     border: 1px solid #fff;
     color: #fff;
     font-family: "Lato", "Helvetica Neue", sans-serif;
@@ -1260,8 +1285,8 @@ html[xmlns] .slides { display: block; }
         text-align: right;
         padding: 10px 0;
     }
-    .courses-navigation li a.next { padding: 6px 12px 6px 30px; }
-    .courses-navigation li a.previous { padding: 6px 30px 6px 12px; }
+    .courses-navigation li a.next { padding: 6px 15px 6px 0; }
+    .courses-navigation li a.previous { padding: 6px 0px 6px 15px; }
 }
 
 @media screen and (min-width: 768px) and (max-width: 900px) {

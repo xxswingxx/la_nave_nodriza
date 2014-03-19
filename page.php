@@ -34,12 +34,12 @@
 					
 		            <?php if (!empty($ids['next'])) { ?>
 		                <li>
-							<a href="<?php echo get_permalink($ids['next']); ?>" class="next">Siguiente</a>
+							<a href="<?php echo get_permalink($ids['next']); ?>" class="next"><span>Siguiente</span></a>
 		                </li>
 		            <?php } ?>
 		            <?php if (!empty($ids['prev'])) { ?>
 		                <li>
-		                    <a href="<?php echo get_permalink($ids['prev']); ?>" class="previous">Anterior</a>
+		                    <a href="<?php echo get_permalink($ids['prev']); ?>" class="previous"><span>Anterior</span></a>
 		                </li>
 		            <?php } ?>  
 	            </ul>
