@@ -155,7 +155,9 @@
                                     $thumbnail = get_thumbnail($pages[$i]->ID, 'medium')
                                 ?>
                                 <?php if($thumbnail != false) { ?>
-                                    <img src="<?php echo $thumbnail[0] ?>" >
+                                    <a href="<?php echo get_permalink($pages[$i]->ID) ?>">
+                                        <img src="<?php echo $thumbnail[0] ?>" >
+                                    </a>
                                 <? } ?>
                             </div>
                             <div class="course-intro">
@@ -193,7 +195,9 @@
                                     $thumbnail = get_thumbnail($pages[$j]->ID, 'medium')
                                 ?>
                                 <?php if($thumbnail != false) { ?>
-                                    <img src="<?php echo $thumbnail[0] ?>" >
+                                    <a href="<?php echo get_permalink($pages[$j]->ID) ?>">
+                                        <img src="<?php echo $thumbnail[0] ?>" >
+                                    </a>    
                                 <? } ?>
                             </div>
                             <div class="course-intro">

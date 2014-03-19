@@ -22,7 +22,9 @@
                                     $thumbnail = get_thumbnail($pages[$i]->ID)
                                 ?>
                                 <?php if($thumbnail != false) { ?>
-                                    <img src="<?php echo $thumbnail[0] ?>" >
+                                    <a href="<?php echo get_permalink($pages[$i]->ID) ?>">
+                                        <img src="<?php echo $thumbnail[0] ?>" >
+                                    </a>
                                 <? } ?>
                             </a>
                         </div>
