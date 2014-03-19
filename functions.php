@@ -207,6 +207,7 @@ function get_prev_next() {
     }
   }
   $current = array_search(get_the_ID(), $pages);
+
   $prevID = null;
   $nextID = null;
   $length = count($pages);
@@ -216,7 +217,7 @@ function get_prev_next() {
       $prevID = (int)$pages[$current-1];
     }
     else{
-      $prevID = isset($pages[$length]);
+      $prevID = (int)$pages[$length -1 ];
     }
 
     if (isset($pages[$current+1])) {
