@@ -19,7 +19,30 @@ $(window).load(function(){
     $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
 
     // Sticky box 
-    $('.sticky-parent').stickit({scope: StickScope.Parent, top: 90, extraHeight: $(".highlighted-blue.two-col.left-sidebar .col").not('.sticky-parent').height() - 500 });
+    width = $(window).width();
+
+    $(window).resize(function(){
+        var diff =  $(this).width() - width;
+        if (diff > 0) {
+            width = $(this).width();
+            sidebar_width = parseInt($('#sidebar').css('width').replace('px',''));
+            new_width = sidebar_width + diff;
+            new_width = new_width > 313 ? '313px' : (new_width + 'px');
+            $('#sidebar').css('width', new_width)
+        }
+        else {
+            width = $(window).width();
+        }
+    })
+
+    if ($('.fixed-sidebar #main-content').height() > $('.fixed-sidebar #sidebar').height()){
+        $.lockfixed('#sidebar', {
+            offset: { 
+                top: 120, 
+                bottom: ($('.more').height() + $('#contact').height()) + 220
+            }
+        });
+    }
 
     //$.lockfixed('.sticky-box', {offset: {top: 120, bottom: $(document).height() - ($("#main").height() + $('header').height())}});
 
