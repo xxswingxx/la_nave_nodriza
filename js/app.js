@@ -39,7 +39,7 @@ $(window).load(function(){
         $.lockfixed('#sidebar', {
             offset: { 
                 top: 120, 
-                bottom: ($('.more').height() + $('#contact').height()) + 220
+                bottom: ($('.more').height() + $('#contact').height()) + 250
             }
         });
     }
