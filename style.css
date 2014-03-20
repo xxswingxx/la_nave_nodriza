@@ -1258,7 +1258,7 @@ html[xmlns] .slides { display: block; }
     border-bottom: none;
     text-decoration: none;
 }
-.cookiebanner a:hover { text-decoration: underline; }
+.cookiebanner a:hover { text-decoration: underline !important; }
 
 
 /* @10 MEDIA QUERIES */
