@@ -94,13 +94,14 @@
                         <p>La primera misión de Lanavenodriza.com es el Curso de diseño de productos digitales, pero ya tenemos en marcha otros formatos: seminarios, talleres, cursos de fin de semana e incluso eventos del sector también tendrán su sitio aquí, en un ambiente cómodo, agradable e inspirador.</p>
                     </div>
                 </div>
+                <div id="position-founders"></div>
             </div>
         </section>
         
         <hr>
-
         <section class="highlighted-gray three-col" id="founders">
             <div class="content">
+
                 <h1>— A los mandos del timón —</h1>
                 <!-- buenhombre -->                 
                 <div class="col">
@@ -138,6 +139,7 @@
                 </div>
                 <!-- /ludita -->
             </div>
+            <div id="position-courses"></div>
         </section>
 
         <hr>
@@ -226,6 +228,7 @@
                 </div>
                 <!-- /second pages row -->
             </div>
+            <div id="position-who-is-for"></div>
             <!-- /active workshops -->
         </section>
         <!-- /courses -->
