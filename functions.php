@@ -251,6 +251,16 @@ function get_page_metadata($page_id) {
   return $meta_array;
 }
 
+function get_contact_form_message($page_id){
+  global $wpdb;
+  $contact_form_content = (array)$wpdb->get_results("SELECT meta_key, meta_value FROM $wpdb->postmeta 
+                                   WHERE post_id = '{$page_id}' 
+                                   AND meta_key = 'lnn_page_contact_form_message'");
+
+  $return_val = isset($contact_form_content[0]) ? $contact_form_content[0]->meta_value : '';
+  return $return_val;
+} 
+
 function la_nave_nodriza_setup() {
     /*
      * Makes La Nave Nodriza available for translation.

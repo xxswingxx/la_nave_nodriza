@@ -56,6 +56,7 @@
                     <div class="contact-button">
                         <a href="#contact" class="button">Contáctanos</a>
                     </div>
+                    <div id="position-la-nave-nodriza" style="clear:both"></div>
                 </div>
                 <!-- share -->
                 <div id="fb-root"></div>
@@ -139,7 +140,7 @@
                 </div>
                 <!-- /ludita -->
             </div>
-            <div id="position-courses"></div>
+            <div id="position-courses" style="clear:both"></div>
         </section>
 
         <hr>
