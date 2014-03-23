@@ -384,6 +384,9 @@ nav ul li.active a {
     color: #1abc9c;
 }
 
+/* faux anchors */
+#home-la-nave-nodriza, #home-founders, #home-courses, #home-who-is-for { clear: both; }
+
 
 /* @5) HEADER */
 
@@ -693,6 +696,10 @@ header .content .share {
 #courses .three-col .col:last-child {
     padding-left: 20px;
     padding-right: 0;    
+}
+#courses .image img {
+    max-height: 170px;
+    width: 100%;
 }
 #courses .course-intro {
     font: 1.6em "Vollkorn", Georgia, 'Times New Roman', Times, serif;
@@ -1252,7 +1259,7 @@ html[xmlns] .slides { display: block; }
     font-size: 13px;     
 }
 .cookiebanner .button {
-    margin: 0 20px 0 0;
+    margin: 0 20px;
     line-height: 20px;
     border: 1px solid #fff;
     color: #fff;
@@ -1270,7 +1277,7 @@ html[xmlns] .slides { display: block; }
     border-bottom: none;
     text-decoration: none;
 }
-.cookiebanner a:hover { text-decoration: underline !important; }
+.cookiebanner a:hover { text-decoration: underline; }
 
 
 /* @10 MEDIA QUERIES */

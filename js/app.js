@@ -15,7 +15,9 @@ $(window).load(function(){
     $('#cookiebanner-fake').click(function(){
         $('#cookiebanner-real').click();
     })
+
     // Add class on window load
+    anchor = window.location.hash.replace('home-', '')
     $('nav').find('a[href='+window.location.hash+']').parent().addClass('active');
 
     // Sticky box 
