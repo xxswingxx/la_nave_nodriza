@@ -22,3 +22,4 @@ This theme relies on the user to put the correct value the the following fields 
 * lnn_page_discounts: Discounts (if any). Used in the course page itself.
 * lnn_page_remaining: Remaining places. Used in the course page itself.
 * lnn_page_call_to_action: The href where the user will be redirected to buy the tickets. Used in the course page itself.
+* lnn_page_contact_form_message: The message that will be shown in the contact section.
