@@ -140,7 +140,7 @@
                 </div>
                 <!-- /ludita -->
             </div>
-            <div id="home-courses" style="clear:both" class="hidden"></div>
+            <div id="home-courses" style="clear:both"></div>
         </section>
 
         <hr>
