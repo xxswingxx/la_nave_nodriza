@@ -56,7 +56,7 @@
                     <div class="contact-button">
                         <a href="#contact" class="button">Contáctanos</a>
                     </div>
-                    <div id="position-la-nave-nodriza" style="clear:both"></div>
+                    <div id="home-la-nave-nodriza" class="hidden" style="clear:both"></div>
                 </div>
                 <!-- share -->
                 <div id="fb-root"></div>
@@ -95,7 +95,7 @@
                         <p>La primera misión de Lanavenodriza.com es el Curso de diseño de productos digitales, pero ya tenemos en marcha otros formatos: seminarios, talleres, cursos de fin de semana e incluso eventos del sector también tendrán su sitio aquí, en un ambiente cómodo, agradable e inspirador.</p>
                     </div>
                 </div>
-                <div id="position-founders"></div>
+                <div id="home-founders" class="hidden"></div>
             </div>
         </section>
         
@@ -140,7 +140,7 @@
                 </div>
                 <!-- /ludita -->
             </div>
-            <div id="position-courses" style="clear:both"></div>
+            <div id="home-courses" style="clear:both" class="hidden"></div>
         </section>
 
         <hr>
@@ -229,7 +229,7 @@
                 </div>
                 <!-- /second pages row -->
             </div>
-            <div id="position-who-is-for"></div>
+            <div id="home-who-is-for" class="hidden"></div>
             <!-- /active workshops -->
         </section>
         <!-- /courses -->

@@ -2,8 +2,8 @@
 <div class="col" id="sidebar">
     <div class="course-price">            
         <h2>Precio</h2>
+        <h3><strong><?php echo (isset($metadata['price']) ? $metadata['price'] : '' ); ?></strong>€</h3>
         <ul class="price">
-            <li><strong><?php echo (isset($metadata['price']) ? $metadata['price'] : '' ); ?></strong>€</li>
             <?php echo (isset($metadata['discounts']) ? $metadata['discounts'] : '' ); ?>
         </ul>
     </div>
@@ -11,7 +11,7 @@
     <div class="course-date">                      
         <h2>Fechas</h2>
         <ul class="date">
-            <?php echo (isset($metadata['date']) ? $metadata['date'] : '' ); ?>
+            <?php echo (isset($metadata['dates']) ? $metadata['dates'] : '' ); ?>
         </ul>
     </div>
 

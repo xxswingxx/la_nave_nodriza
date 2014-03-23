@@ -114,20 +114,21 @@
                 <div id="logo">
                     <?php 
                         $host = is_front_page() ? '': get_home_url() ;
-                        $positioning = is_front_page() ? '': 'position-';
+                        $home = is_front_page() ? '': 'home-';
+                        $index = is_front_page() ? '#home' : get_home_url() 
                     ?>
-                    <a href="<?php echo $host ?>#home" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
-                    <div id="claim"><a href="<?php echo $host ?>#home">Todos tenemos algo que aprender</a></div>
+                    <a href="<?php echo $index ?>" accesskey="1"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="La Nave Nodriza" width="211" height="19"></a>
+                    <div id="claim"><a href="<?php echo $index ?>">Todos tenemos algo que aprender</a></div>
                 </div> 
                 <!-- /logo -->
 
                 <!-- global navigation -->
                 <nav role="navigation">
                     <ul> 
-                        <li><a href="<?php echo $host ?>#<?php echo $positioning ?>la-nave-nodriza" accesskey="2">Qué es</a></li>
-                        <li><a href="<?php echo $host ?>#<?php echo $positioning ?>founders" accesskey="3">Quién está detrás</a></li>
-                        <li><a href="<?php echo $host ?>#<?php echo $positioning ?>courses" accesskey="4">Qué ofrecemos</a></li>
-                        <li><a href="<?php echo $host ?>#<?php echo $positioning ?>who-is-for" accesskey="5">Para quién</a></li>
+                        <li><a href="<?php echo $host ?>#<?php echo $home ?>la-nave-nodriza" accesskey="2">Qué es</a></li>
+                        <li><a href="<?php echo $host ?>#<?php echo $home ?>founders" accesskey="3">Quién está detrás</a></li>
+                        <li><a href="<?php echo $host ?>#<?php echo $home ?>courses" accesskey="4">Qué ofrecemos</a></li>
+                        <li><a href="<?php echo $host ?>#<?php echo $home ?>who-is-for" accesskey="5">Para quién</a></li>
                         <li><a href="<?php echo (is_home() ? $host : '') ?>#contact" accesskey="6">Contacta</a></li>       
                         <li class="<?php echo (is_home() ? 'active' :  '') ?>">
                             <a href="<?php echo get_permalink( get_option('page_for_posts' ) ); ?>" accesskey="7">Bitácora</a>

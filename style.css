@@ -276,7 +276,6 @@ p:last-child { padding-bottom: 0; }
 }
 .fixed-sidebar:after { clear: both; }
 
-
 .fixed-sidebar #sidebar {
   float: left;
   max-width: 27%;
@@ -293,8 +292,7 @@ p:last-child { padding-bottom: 0; }
 }
 .left-sidebar .col h2, .fixed-sidebar #main-content h2 { text-transform: uppercase; }
 .left-sidebar .col:first-child h2, .fixed-sidebar #sidebar h2 { font-weight: normal; }
-.left-sidebar .col:last-child h2, .fixed-sidebar #main-content h2 { padding-top: 15px; }
-.left-sidebar .col:last-child h2:first-child, .fixed-sidebar #sidebar h2  { padding-top: 0; }
+.left-sidebar .col:last-child h2, .fixed-sidebar #sidebar h2:first-child, .fixed-sidebar #main-content h2:first-child { padding-top: 20px; }
 
 /* three columns */
 .three-col { overflow: hidden; }
@@ -340,6 +338,12 @@ p:last-child { padding-bottom: 0; }
     position: relative;
     top: 22px;
 }
+#logo:active {
+    position: relative;
+    top: 23px;
+    left: 1px
+}
+
 #logo img {
     display: block;
     margin-bottom: 10px;
@@ -546,13 +550,13 @@ header .content .share {
     left: 1px;
     top: 1px;
 }
-.courses-navigation li a.next { padding: 10px 15px 10px 0; }
-.courses-navigation li a.next span {
+.courses-navigation li a.previous { padding: 10px 15px 10px 0; }
+.courses-navigation li a.previous span {
     padding-left: 30px;  
     background: url('./images/header/left-arrow.png') no-repeat center left;
 }
-.courses-navigation li a.previous { padding: 10px 0px 10px 15px; }
-.courses-navigation li a.previous span {
+.courses-navigation li a.next { padding: 10px 0px 10px 15px; }
+.courses-navigation li a.next span {
     padding-right: 30px; 
     background: url('./images/header/right-arrow.png') no-repeat center right;   
 }
@@ -604,13 +608,13 @@ header .content .share {
     margin: 12px 0 0 20px;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
+.course-heading .pricing .price strong {
+    font-size: 3.125em;
+    font-weight: 700;    
+}
 .course-heading .pricing .call-to-action .button { padding: 11px 50px; }
 
 /* common pricing */
-.price strong, .date strong {
-    font-size: 3.125em;
-    font-weight: 700;
-}
 .call-to-action .button {
     padding-top: 11px;
     padding-bottom: 11px;
@@ -768,15 +772,28 @@ blockquote.small-quote p {
 }
 
 /* course price */
-.course-price { margin-bottom: 70px; }
+.course-price { margin-bottom: 40px; }
 .course-price h2 { margin-bottom: 8px; }
-.course-price .price { line-height: 1.2; }
+.course-price .price { 
+    margin-top: 5px;
+    line-height: 1.2;
+}
 
 /* course date */
 .course-date { margin-bottom: 30px; }
 .course-date h2 { margin-bottom: 8px; }
 .course-date .date { line-height: 1.2; }
 .course-date .date .total-length { margin-bottom: 20px; }
+
+/* common price & date*/
+.course-price h3, .course-date h3  {
+    font: 1em "Lato", "Helvetica Neue", sans-serif;
+    line-height: 1;    
+}
+.course-price h3 strong, .course-date h3 {
+    font-size: 3.125em;
+    font-weight: 700;    
+}
 
 /*  course call-to-action */
 #sidebar .call-to-action {
@@ -1102,11 +1119,6 @@ footer a {
 
 /* @9) VENDORS */
 
-
-/* sticky menu 
-.left-sidebar .sticky-parent { position: relative; }
-.left-sidebar .sticky-parent .sticky-box { position: absolute; }*/
-
 /* custom select */
 .custom-select.btn-group {
     float: none;
@@ -1272,6 +1284,10 @@ html[xmlns] .slides { display: block; }
         top: 18px;
         float: none;        
     }
+    #logo:active {
+        top: 19px;
+        float: none;        
+    }
     #logo img {
         width: 170px; 
         margin-bottom: 5px;     
@@ -1292,8 +1308,8 @@ html[xmlns] .slides { display: block; }
         text-align: right;
         padding: 10px 0;
     }
-    .courses-navigation li a.next { padding: 6px 15px 6px 0; }
-    .courses-navigation li a.previous { padding: 6px 0px 6px 15px; }
+    .courses-navigation li a.previous { padding: 6px 15px 6px 0; }
+    .courses-navigation li a.next { padding: 6px 0px 6px 15px; }
     
     .price strong, .date strong { font-size: 3em; }
 }
@@ -1303,6 +1319,7 @@ html[xmlns] .slides { display: block; }
     
     #navbar { height: 70px; }
     #logo { top: 18px; }
+    #logo:active { top: 19px; }
     #logo img {
         width: 170px; 
         margin-bottom: 5px;     

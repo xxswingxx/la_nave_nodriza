@@ -38,7 +38,7 @@ $(window).load(function(){
     if ($('.fixed-sidebar #main-content').height() > $('.fixed-sidebar #sidebar').height()){
         $.lockfixed('#sidebar', {
             offset: { 
-                top: 120, 
+                top: 100, 
                 bottom: ($('.more').height() + $('#contact').height()) + 250
             }
         });
