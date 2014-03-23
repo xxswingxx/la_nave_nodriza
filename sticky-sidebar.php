@@ -10,9 +10,7 @@
 
     <div class="course-date">                      
         <h2>Fechas</h2>
-        <ul class="date">
-            <?php echo (isset($metadata['dates']) ? $metadata['dates'] : '' ); ?>
-        </ul>
+        <?php echo (isset($metadata['dates']) ? $metadata['dates'] : '' ); ?>
     </div>
 
     <div class="call-to-action">
