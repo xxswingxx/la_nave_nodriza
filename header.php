@@ -77,8 +77,11 @@
         <!-- scripts -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/main.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.appear.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.lockfixed.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.konami.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/app.min.js"></script>
-        <script type="text/javascript" id="cookiebanner" src="<?php echo get_template_directory_uri(); ?>/js/cookiebanner.js"
+        <script type="text/javascript" id="cookiebanner" src="<?php echo get_template_directory_uri(); ?>/js/cookiebanner.min.js"
                 data-message="Las cookies nos permiten ofrecer nuestros servicios y mejorar su experiencia en Internet. Al utilizar nuestros servicios, aceptas el uso que hacemos de las cookies."
                 data-linkmsg="Más información."
                 data-bg="#464646"
